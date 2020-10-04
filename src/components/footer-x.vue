@@ -14,9 +14,8 @@
                 </template>
             </van-tabbar-item>
             <van-tabbar-item>
-                <template #icon="props">        
-                    <img :src="props.active ? icon.active : icon.inactive" style="width:30px;height:30px; margin-bottom:-10px;" />
-                    <span></span>
+                <template >   
+                    <img src="../images/icon/播放@3x.png" alt="" style="width:30px;height:30px;margin-top:-15px;">
                 </template>
             </van-tabbar-item>
             <van-tabbar-item>
@@ -41,9 +40,9 @@ export default {
      data() {
         return {
         active: 0,
-        icon: {
-            active: '/img/x3x.8abff6c1.png',
-            inactive: '/img/x3x.8abff6c1.png',
+        icon5: {
+            active: '/img/播放@3x.8abff6c1.png',
+            inactive: '/img/播放@3x.8abff6c1.png',
         },
         icon1: {
             inactive: 'data:image/png;base64,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',
