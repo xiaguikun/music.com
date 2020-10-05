@@ -6,10 +6,11 @@ import store from './store'
 import "./assets/reset.less"
 import "amfe-flexible";
 
-import { Tabbar, TabbarItem } from 'vant';
+import { Tabbar, TabbarItem, Search } from 'vant';
 
 Vue.use(Tabbar);
 Vue.use(TabbarItem);
+Vue.use(Search);
 
 Vue.config.productionTip = false
 

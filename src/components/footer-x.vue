@@ -1,13 +1,13 @@
 <template>
     <div class="footer-x">
         <van-tabbar v-model="active" :placeholder="true" active-color="#FD6B95" >
-            <van-tabbar-item>
+            <van-tabbar-item to="/index">
                 <template #icon="props">
                     <img :src="props.active ? icon1.active : icon1.inactive" />
                     <span>首页</span>
                 </template>
             </van-tabbar-item>
-            <van-tabbar-item>
+            <van-tabbar-item to="/community">
                 <template #icon="props">
                     <img :src="props.active ? icon2.active : icon2.inactive" />
                     <span>社区</span>
@@ -18,15 +18,15 @@
                     <img src="../images/icon/播放@3x.png" alt="" style="width:30px;height:30px;margin-top:-15px;">
                 </template>
             </van-tabbar-item>
-            <van-tabbar-item>
+            <van-tabbar-item to="/subscribe">
                 <template #icon="props">
                     <img :src="props.active ? icon3.active : icon3.inactive" />
                     <span>订阅</span>
                 </template>
             </van-tabbar-item>
-            <van-tabbar-item>
-                <template #icon="props">
-                    <img :src="props.active ? icon1.active : icon1.inactive" />
+            <van-tabbar-item to="/mine">
+                <template #icon="props" >
+                    <img :src="props.active ? icon4.active : icon4.inactive" />
                     <span>我的</span>
                 </template>
             </van-tabbar-item>

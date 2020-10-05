@@ -12,7 +12,36 @@ VueRouter.prototype.push = function push(location, onResolve, onReject) {
 const routes = [{
     path: "/",
     component: () =>
-        import ('../views/index-x.vue')
+        import ('../views/index-x.vue'),
+    children: [{
+        path: '/',
+        redirect: '/index'
+    }, {
+        path: '/index',
+        component: () =>
+            import ('../views/ind-x.vue'),
+        children: [{
+            path: '/index',
+            component: () =>
+                import ('../views/ind-recommed-x.vue')
+        }, {
+            path: '/vip',
+            component: () =>
+                import ('../views/ind-vip-y.vue')
+        }]
+    }, {
+        path: '/community',
+        component: () =>
+            import ('../views/community-x.vue')
+    }, {
+        path: '/subscribe',
+        component: () =>
+            import ('../views/subscribe-x.vue')
+    }, {
+        path: '/mine',
+        component: () =>
+            import ('../views/mine-x.vue')
+    }]
 }]
 
 const router = new VueRouter({
