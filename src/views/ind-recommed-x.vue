@@ -12,13 +12,60 @@
         <div class="banner">
                <img src="../images/images/banner1.png" alt="">
         </div>
-        
+        <ul class="four">
+            <li>
+                <van-icon name="send-gift-o"/>
+                <p>每日推荐</p>
+            </li>
+            <li>
+                <van-icon name="bar-chart-o"/>
+                <p>收听排行</p>
+            </li>
+            <li>
+                <van-icon name="music-o"/>
+                <p>助眠解压</p>
+            </li>
+            <li>
+                <van-icon name="qr"/>
+                <p>经典必听</p>
+            </li>
+        </ul> 
+        <div class="like">
+            <div class="like-top">
+                <section>
+                    <van-icon name="like-o" />
+                    <span>猜你喜欢</span>
+                </section>  
+                <section>
+                    <span>更多</span>
+                    <van-icon name="arrow" />
+                </section>  
+            </div>
+            <ul class="like-bottom">
+                <li v-for="(item,index) in likeData" :key="index">
+                    <img :src="item.imgUrl" alt="">
+                    <p>{{item.title}}</p>
+                </li>
+            </ul>
+        </div>       
     </div>
 </template>
 
 <script>
 export default {
-    
+    methods:{
+        getIndLikeData(){
+            this.$store.dispatch('getIndLike')
+        }
+    },
+    mounted(){
+        this.getIndLikeData();
+    },
+    computed:{
+        likeData(){
+            return this.$store.state.likeData
+        }
+    }
 }
 </script>
 
@@ -60,6 +107,68 @@ export default {
                 width:100%;
                 height:100%;
             }
+        }
+        .four{
+            margin-top:25px;
+            width:100%;
+            height:25px;
+            display:flex;
+            justify-content:space-evenly;
+            font-size:14px;
+            li{
+                display: flex;
+                flex-direction:column;
+                align-items:center;
+                i{
+                    font-size:25px;
+                    color:yellowgreen;
+                }
+                p{
+                    margin-top:10px;
+                }
+            }
+        }
+        .like{
+            width:100%;
+            height:25px;
+            margin-top:55px;
+            padding:0 15px;
+            .like-top{
+                font-size:16px;
+                display:flex;
+                justify-content:space-between;
+                section:first-child{
+                    i{
+                        color:#FD6B95;
+                    }
+                    span{
+                        padding-left:10px;
+                    }
+                }
+                section:last-child{
+                    font-size:14px;
+                    span{
+                        padding-right:5px;
+                    }
+                }
+            }
+            .like-bottom{
+                font-size:14px;
+                margin-top:15px;
+                li{
+                    float:left;
+                    width:29%;
+                    margin:0 2%;
+                    margin-top:15px;
+                    img{
+                        width:100%;
+                    }
+                    p{
+                        margin-top:10px;
+                    }
+                }
+            }
+           
         }
     }
 </style>
