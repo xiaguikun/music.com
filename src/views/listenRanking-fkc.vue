@@ -7,7 +7,7 @@
             @click-left="onClickLeft"
             class="van-nav-bar"
             />
-            <van-search v-model="value" placeholder="搜索" />
+            <van-search  placeholder="搜索" />
             <span class="tubiao">
             <img src="../images/icon/历史时间-3@3x.png" alt="" class="time">
             <img src="../images/icon/plus-circle@3x.png" alt="" class="jiahao">
