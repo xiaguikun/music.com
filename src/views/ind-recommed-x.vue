@@ -1,4 +1,5 @@
 <template>
+<div class="ind-recom-x">
     <div class="recommed-x">
         <div class="top">
            <div class="search">
@@ -84,9 +85,12 @@
             </ul>
         </div>
     </div>
+</div>
 </template>
 
 <script>
+import BetterScroll from 'better-scroll';
+
 export default {
     data(){
         return {
@@ -100,10 +104,24 @@ export default {
     methods:{
         getIndLikeData(){
             this.$store.dispatch('getIndLike')
+        },
+        async addBetterScroll(){
+            await this.$nextTick();
+            new BetterScroll('.ind-recom-x',{
+                scrollY:true,
+                scrollX:false,
+                click:true
+            })
+            new BetterScroll('.p1-ul',{
+                scrollY:true,
+                scrollX:false,
+                click:true
+            })
         }
     },
     mounted(){
         this.getIndLikeData();
+        this.addBetterScroll();
     },
     computed:{
         likeData(){
@@ -120,7 +138,14 @@ export default {
 </script>
 
 <style lang="less" scoped>
-    .recommed-x{
+.ind-recom-x{
+    position:absolute;
+    top:0;
+    bottom:30px;
+    left:0;
+    right:0;
+     .recommed-x{
+        //  overflow: hidden;
         .top{
             width:100%;
             height: 200px;
@@ -252,6 +277,8 @@ export default {
             }
         }
         .p1,.p2{
+            width:100%;
+            height:50px;
             font-size:18px;
             p{
                 padding:15px;
@@ -266,10 +293,11 @@ export default {
                 height:100%;
                 display:flex;
                 flex-shrink:0;
-                overflow:auto;
+                // overflow:auto;
+                overflow: hidden;
                 li{
                     font-size:14px;
-                    margin:0 15px;
+                    margin-left:15px;
                     p{
                         margin-top:10px;
                     }
@@ -280,4 +308,6 @@ export default {
             }
         }
     }
+}
+   
 </style>

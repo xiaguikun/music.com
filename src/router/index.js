@@ -50,6 +50,9 @@ const routes = [{
     path: '/gq1',
     component: () =>
         import ('../views/history-g.vue')
+},{
+    path:'/gq2',
+    component:()=>import('../views/classify-g.vue')
 }]
 
 const router = new VueRouter({
