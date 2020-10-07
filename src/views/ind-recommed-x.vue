@@ -89,7 +89,7 @@
 </template>
 
 <script>
-import BetterScroll from 'better-scroll';
+// import BetterScroll from 'better-scroll';
 
 export default {
     data(){
@@ -107,16 +107,16 @@ export default {
         },
         async addBetterScroll(){
             await this.$nextTick();
-            new BetterScroll('.ind-recom-x',{
-                scrollY:true,
-                scrollX:false,
-                click:true
-            })
-            new BetterScroll('.p1-ul',{
-                scrollY:true,
-                scrollX:false,
-                click:true
-            })
+            // new BetterScroll('.ind-recom-x',{
+            //     scrollY:true,
+            //     scrollX:false,
+            //     click:true
+            // })
+            // new BetterScroll('.p1-ul',{
+            //     scrollY:true,
+            //     scrollX:false,
+            //     click:true
+            // })
         }
     },
     mounted(){
@@ -293,8 +293,8 @@ export default {
                 height:100%;
                 display:flex;
                 flex-shrink:0;
-                // overflow:auto;
-                overflow: hidden;
+                overflow:auto;
+                // overflow: hidden;
                 li{
                     font-size:14px;
                     margin-left:15px;
