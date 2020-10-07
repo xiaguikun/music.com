@@ -28,6 +28,10 @@ const routes = [{
             path: '/vip',
             component: () =>
                 import ('../views/ind-vip-y.vue')
+        }, {
+            path: '/listenRanking-fkc',
+            component: () =>
+                import ('../views/listenRanking-fkc.vue')
         }]
     }, {
         path: '/community',

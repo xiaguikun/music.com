@@ -14,7 +14,7 @@ export default {
         return {
             navList:['推荐',' VIP ','儿童','相声','音乐','英语'],
             nowIndex:0,
-            routeUrl:['/index','/vip','','','','']
+            routeUrl:['/index','/vip','','','/listenRanking-fkc','']
         }
     },
     methods:{
