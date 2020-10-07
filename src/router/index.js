@@ -27,7 +27,7 @@ const routes = [{
         }, {
             path: '/vip',
             component: () =>
-                import ('../views/ind-vip-y.vue')
+                import ('../views/ind-vip-f.vue')
         }]
     }, {
         path: '/community',
