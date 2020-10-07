@@ -1,5 +1,6 @@
 const state = {
-    likeData: []
+    likeData: [],
+    indNavColor:':#76b6ee',
 }
 
 export default state;

@@ -1,7 +1,9 @@
 const mutations = {
     getIndLike(state, payload) {
-        state.likeData = payload.like;
-        console.log(payload.like);
+        state.likeData = payload;
+    },
+    changeColor(state,payload){
+        state.indNavColor=payload;
     }
 }
 
