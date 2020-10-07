@@ -46,6 +46,10 @@ const routes = [{
     path: '/fkc1',
     component: () =>
         import ('../views/listenRanking-fkc.vue')
+},{
+    path: '/gq1',
+    component: () =>
+        import ('../views/history-g.vue')
 }]
 
 const router = new VueRouter({
