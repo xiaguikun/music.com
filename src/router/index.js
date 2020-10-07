@@ -28,10 +28,6 @@ const routes = [{
             path: '/vip',
             component: () =>
                 import ('../views/ind-vip-y.vue')
-        }, {
-            path: '/listenRanking-fkc',
-            component: () =>
-                import ('../views/listenRanking-fkc.vue')
         }]
     }, {
         path: '/community',
@@ -46,6 +42,10 @@ const routes = [{
         component: () =>
             import ('../views/mine-x.vue')
     }]
+},{
+    path: '/fkc1',
+    component: () =>
+        import ('../views/listenRanking-fkc.vue')
 }]
 
 const router = new VueRouter({
