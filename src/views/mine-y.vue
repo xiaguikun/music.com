@@ -1,5 +1,5 @@
 <template>
-    <div class="mine-x">
+    <div class="mine-y">
         mine
     </div>
 </template>

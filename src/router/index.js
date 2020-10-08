@@ -40,7 +40,7 @@ const routes = [{
     }, {
         path: '/mine',
         component: () =>
-            import ('../views/mine-x.vue')
+            import ('../views/mine-y.vue')
     }]
 }, {
     path: '/fkc1',
