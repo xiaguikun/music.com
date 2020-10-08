@@ -42,10 +42,17 @@ const routes = [{
         component: () =>
             import ('../views/mine-x.vue')
     }]
-},{
+}, {
     path: '/fkc1',
     component: () =>
         import ('../views/listenRanking-fkc.vue')
+}, {
+    path: '/gq1',
+    component: () =>
+        import ('../views/history-g.vue')
+},{
+    path:'/gq2',
+    component:()=>import('../views/classify-g.vue')
 }]
 
 const router = new VueRouter({

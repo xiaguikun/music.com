@@ -3,7 +3,8 @@ const state = {
     vipData: [],
     vipRecommend: [],
     vipProgram: [],
-    vipFooter: []
+    vipFooter: [],
+    indNavColor: ':#76b6ee',
 }
 
 export default state;

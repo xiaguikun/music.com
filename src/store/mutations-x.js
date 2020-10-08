@@ -9,6 +9,10 @@ const mutations = {
         state.vipRecommend = payload.recommend;
         state.vipProgram = payload.program;
         state.vipFooter = payload.footer;
+        state.likeData = payload;
+    },
+    changeColor(state, payload) {
+        state.indNavColor = payload;
     }
 }
 
