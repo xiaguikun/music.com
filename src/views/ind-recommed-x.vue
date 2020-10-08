@@ -18,19 +18,19 @@
             </van-swipe>
         </div>
         <ul class="four">
-            <li>
+            <li @click="toRanking">
                 <van-icon name="send-gift-o"/>
                 <p>每日推荐</p>
             </li>
-            <li>
+            <li @click="toRanking">
                 <van-icon name="bar-chart-o"/>
                 <p>收听排行</p>
             </li>
-            <li>
+            <li @click="toRanking">
                 <van-icon name="music-o"/>
                 <p>助眠解压</p>
             </li>
-            <li>
+            <li @click="toRanking">
                 <van-icon name="qr"/>
                 <p>经典必听</p>
             </li>
@@ -117,6 +117,9 @@ export default {
             //     scrollX:false,
             //     click:true
             // })
+        },
+        toRanking(){
+            this.$router.push('/toRank')
         }
     },
     mounted(){
@@ -292,10 +295,10 @@ export default {
                 width:100%;
                 height:100%;
                 display:flex;
-                flex-shrink:0;
                 overflow:auto;
                 // overflow: hidden;
                 li{
+                    flex-shrink:0;
                     font-size:14px;
                     margin-left:15px;
                     p{

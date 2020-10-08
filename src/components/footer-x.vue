@@ -1,6 +1,6 @@
 <template>
     <div class="footer-x">
-        <van-tabbar v-model="active" :placeholder="bol" active-color="#FD6B95" >
+        <van-tabbar v-model="active" :placeholder="bol" active-color="#FD6B95" @click.native="changeAct">
             <van-tabbar-item to="/index">
                 <template #icon="props">
                     <img :src="props.active ? icon1.active : icon1.inactive" />
@@ -8,9 +8,9 @@
                 </template>
             </van-tabbar-item>
             <van-tabbar-item to="/community">
-                <template #icon="props">
+                 <template #icon="props">
                     <img :src="props.active ? icon2.active : icon2.inactive" />
-                    <span>社区</span>
+                    <span>首页</span>
                 </template>
             </van-tabbar-item>
             <van-tabbar-item>
@@ -37,6 +37,16 @@
 
 <script>
 export default {
+    methods:{
+        changeAct(){
+            console.log(1);
+            sessionStorage.setItem('active',this.active.toString())
+            console.log(this.active.toString());
+        }
+    },
+    mounted(){
+        this.active=sessionStorage.getItem('active') ? parseInt(sessionStorage.getItem('active')) : 0;
+    },
      data() {
         return {
         bol:true,

@@ -65,7 +65,7 @@ const routes = [{
             import ('../views/mine-y.vue')
     }]
 }, {
-    path: '/fkc1',
+    path: '/toRank',
     component: () =>
         import ('../views/listenRanking-fkc.vue')
 }, {
