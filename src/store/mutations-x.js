@@ -1,6 +1,6 @@
 const mutations = {
     getIndLike(state, payload) {
-        state.likeData = payload.like;
+        state.likeData = payload;
         console.log(payload.like);
     },
     getIndVip(state, payload) {
@@ -9,7 +9,6 @@ const mutations = {
         state.vipRecommend = payload.recommend;
         state.vipProgram = payload.program;
         state.vipFooter = payload.footer;
-        state.likeData = payload;
     },
     changeColor(state, payload) {
         state.indNavColor = payload;
