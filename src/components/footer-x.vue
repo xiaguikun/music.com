@@ -1,6 +1,6 @@
 <template>
     <div class="footer-x">
-        <van-tabbar v-model="active" :placeholder="true" active-color="#FD6B95" >
+        <van-tabbar v-model="active" :placeholder="bol" active-color="#FD6B95" >
             <van-tabbar-item to="/index">
                 <template #icon="props">
                     <img :src="props.active ? icon1.active : icon1.inactive" />
@@ -39,6 +39,7 @@
 export default {
      data() {
         return {
+        bol:true,
         active: 0,
         icon5: {
             active: '/img/播放@3x.8abff6c1.png',

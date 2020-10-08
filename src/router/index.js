@@ -32,7 +32,17 @@ const routes = [{
     }, {
         path: '/community',
         component: () =>
-            import ('../views/community-x.vue')
+            import ('../views/community-x.vue'),
+        children:[
+            {
+                path:'/community',
+                redirect:'/community-one'
+            },
+            {
+                path:'/community-one',
+                component:()=>import('../components/community-one-f.vue')
+            }
+        ]
     }, {
         path: '/subscribe',
         component: () =>

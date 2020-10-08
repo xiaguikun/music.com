@@ -307,6 +307,9 @@ export default {
                 }
             }
         }
+        .p2-ul{
+            margin-bottom:50px;
+        }
     }
 }
    
