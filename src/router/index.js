@@ -41,6 +41,18 @@ const routes = [{
             {
                 path:'/community-one',
                 component:()=>import('../components/community-one-f.vue')
+            },
+            {
+                path:'/community-two',
+                component:()=>import('../components/community-two-f.vue')
+            },
+            {
+                path:'/community-three',
+                component:()=>import('../components/community-three-f.vue')
+            },
+            {
+                path:'/community-four',
+                component:()=>import('../components/community-four-f.vue')
             }
         ]
     }, {
