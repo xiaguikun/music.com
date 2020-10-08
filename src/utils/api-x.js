@@ -7,3 +7,8 @@ import http from './http-x';
 export function getIndLikeData(params) {
     return http.get('/like', params);
 }
+
+
+export function getIndVipData(params) {
+    return http.get('/vip', params);
+}

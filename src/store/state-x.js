@@ -1,5 +1,9 @@
 const state = {
-    likeData: []
+    likeData: [],
+    vipData: [],
+    vipRecommend: [],
+    vipProgram: [],
+    vipFooter: []
 }
 
 export default state;
