@@ -105,14 +105,18 @@ export default {
         getIndLikeData(){
             this.$store.dispatch('getIndLike')
         },
-        async addBetterScroll(){
-            await this.$nextTick();
+        addBetterScroll(){
             new BetterScroll('.ind-recom-x',{
                 scrollY:true,
                 scrollX:false,
                 click:true
             });
             new BetterScroll('.p1-ul',{
+                scrollY:false,
+                scrollX:true,
+                click:true
+            });
+            new BetterScroll('.p2-ul',{
                 scrollY:false,
                 scrollX:true,
                 click:true
@@ -138,11 +142,9 @@ export default {
         }
     },
     watch: {
-        storyData() {
-            let _this=this
-            setTimeout(()=>{
-                _this.addBetterScroll();
-            },500)
+        async storyData() {
+            await this.$nextTick();
+            this.addBetterScroll();
         }
     }
 }
@@ -300,15 +302,16 @@ export default {
             height:150px;
             margin-top:5px;
             ul{
-                width:100%;
-                height:100%;
-                display:flex;
-                overflow:auto;
+                // width:100%;
+                // height:100%;
+                display: inline-flex;
+                flex-wrap: nowrap;
+                overflow:hidden;
                 // overflow: hidden;
                 li{
-                    flex-shrink:0;
                     font-size:14px;
                     margin-left:15px;
+                    width:25%;
                     p{
                         margin-top:10px;
                     }
