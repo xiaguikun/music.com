@@ -5,7 +5,7 @@ import { Toast } from 'vant';
 
 const instance = axios.create({
     baseURL: 'https://mock.yonyoucloud.com/mock/15781/music',
-    timeout: 1000,
+    timeout: 2000,
 });
 
 

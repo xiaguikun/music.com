@@ -4,6 +4,7 @@ const state = {
     vipRecommend: [],
     vipProgram: [],
     vipFooter: [],
+    mineData: [],
     indNavColor: ':#76b6ee',
 }
 

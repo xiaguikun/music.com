@@ -1,4 +1,4 @@
-import { getIndLikeData, getIndVipData } from "../utils/api-x"
+import { getIndLikeData, getIndVipData, getMineListData } from "../utils/api-x"
 
 const actions = {
     async getIndLike({ commit }) {
@@ -10,6 +10,11 @@ const actions = {
         const res = await getIndVipData()
         console.log(res);
         commit('getIndVip', res.data);
+    },
+    async getMineList({ commit }) {
+        const res = await getMineListData()
+        console.log(res);
+        commit('getMineList', res.data);
     }
 }
 
