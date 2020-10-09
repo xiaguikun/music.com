@@ -12,6 +12,9 @@ const mutations = {
     },
     changeColor(state, payload) {
         state.indNavColor = payload;
+    },
+    getSubscribe(state,payload){
+        state.subscribeData=payload;
     }
 }
 
