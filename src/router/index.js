@@ -21,7 +21,10 @@ const routes = [{
         component: () =>
             import ('../views/ind-x.vue'),
         children: [{
-            path: '/index',
+            path:'/index',
+            redirect:'/index-ind'
+        },{
+            path: '/index-ind',
             component: () =>
                 import ('../views/ind-recommed-x.vue')
         }, {
@@ -65,7 +68,7 @@ const routes = [{
             import ('../views/mine-y.vue')
     }]
 }, {
-    path: '/fkc1',
+    path: '/toRank',
     component: () =>
         import ('../views/listenRanking-fkc.vue')
 }, {
