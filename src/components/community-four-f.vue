@@ -14,7 +14,7 @@
             </p>
          </div>
          <div class="list-right">
-            <img src="http://p1.music.126.net/SqFGoHFMTTwmnVma_TLBrA==/109951164538803457.jpg?param=180y180" alt="">
+            <img :src="item.img" alt="">
          </div>
       </div>
    </div>
