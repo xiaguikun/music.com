@@ -12,3 +12,7 @@ export function getIndLikeData(params) {
 export function getIndVipData(params) {
     return http.get('/vip', params);
 }
+
+export function getFCommunityData(params) {
+    return http.get('/community-f', params);
+}

@@ -32,7 +32,6 @@ export default {
             this.$router.push(this.activeUrl[index])
         }
     }
-    
 }
 </script>
 
