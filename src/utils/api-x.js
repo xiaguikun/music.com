@@ -9,8 +9,8 @@ export function getIndLikeData(params) {
 }
 
 
-export function getsubscribeData(params){
-    return http.get('/subscribe',params);
+export function getsubscribeData(params) {
+    return http.get('/subscribe', params);
 }
 
 
@@ -20,4 +20,8 @@ export function getIndVipData(params) {
 
 export function getFCommunityData(params) {
     return http.get('/community-f', params);
+}
+
+export function getListenListData(params) {
+    return http.get('/listenlist', params);
 }

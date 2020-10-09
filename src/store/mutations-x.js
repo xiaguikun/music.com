@@ -22,6 +22,9 @@ const mutations = {
     },
     getSubscribe(state, payload) {
         state.subscribeData = payload;
+    },
+    getListenList(state, payload) {
+        state.listenlistData = payload.list1;
     }
 }
 
