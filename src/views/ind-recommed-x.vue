@@ -89,7 +89,7 @@
 </template>
 
 <script>
-// import BetterScroll from 'better-scroll';
+import BetterScroll from 'better-scroll';
 
 export default {
     data(){
@@ -107,16 +107,16 @@ export default {
         },
         async addBetterScroll(){
             await this.$nextTick();
-            // new BetterScroll('.ind-recom-x',{
-            //     scrollY:true,
-            //     scrollX:false,
-            //     click:true
-            // })
-            // new BetterScroll('.p1-ul',{
-            //     scrollY:true,
-            //     scrollX:false,
-            //     click:true
-            // })
+            new BetterScroll('.ind-recom-x',{
+                scrollY:true,
+                scrollX:false,
+                click:true
+            });
+            new BetterScroll('.p1-ul',{
+                scrollY:false,
+                scrollX:true,
+                click:true
+            })
         },
         toRanking(){
             this.$router.push('/toRank')
@@ -124,7 +124,7 @@ export default {
     },
     mounted(){
         this.getIndLikeData();
-        this.addBetterScroll();
+        // this.addBetterScroll();
     },
     computed:{
         likeData(){
@@ -135,6 +135,14 @@ export default {
         },
         storyData(){
             return this.$store.state.likeData.story;
+        }
+    },
+    watch: {
+        storyData() {
+            let _this=this
+            setTimeout(()=>{
+                _this.addBetterScroll();
+            },500)
         }
     }
 }

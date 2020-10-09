@@ -39,9 +39,7 @@
 export default {
     methods:{
         changeAct(){
-            console.log(1);
-            sessionStorage.setItem('active',this.active.toString())
-            console.log(this.active.toString());
+            sessionStorage.setItem('active',this.active.toString());
         }
     },
     mounted(){
@@ -79,6 +77,9 @@ export default {
 
 <style lang="less" scoped>
 .footer-x{
+    position:fixed;
+    left:0;
+    bottom:0;
     text-align:center;
     img{
         margin-left:3px;
