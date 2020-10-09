@@ -82,6 +82,9 @@ const routes = [{
 {
     path:'/fkc',
     component:()=>import('../views/listenlist-f.vue')
+},{
+    path:'/yzy1',
+    component:()=>import('../views/shopYet-y.vue')
 }
 ]
 
