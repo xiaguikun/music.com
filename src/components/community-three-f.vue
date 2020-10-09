@@ -38,6 +38,7 @@ export default {
 <style lang='less' scoped>
 .community-three{
    width: 100%;
+   margin-bottom:60px;
    .list{
       border-bottom: 1px solid #e4e4e4;
       width: 100%;

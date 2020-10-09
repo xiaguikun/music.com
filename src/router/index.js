@@ -60,8 +60,21 @@ const routes = [{
         ]
     }, {
         path: '/subscribe',
-        component: () =>
-            import ('../views/subscribe-x.vue')
+        component: () =>import ('../views/subscribe-x.vue'),
+        children:[
+            {
+                path:'/subscribe',
+                redirect:'/take'
+            },
+            {
+                path:'/take',
+                component:()=>import('../components/take.vue')
+            },
+            {
+                path:'/updata',
+                component:()=>import('../components/updata.vue')
+            }
+        ]
     }, {
         path: '/mine',
         component: () =>
@@ -82,6 +95,9 @@ const routes = [{
 {
     path:'/fkc',
     component:()=>import('../views/listenlist-f.vue')
+},{
+    path:'/yzy1',
+    component:()=>import('../views/shopYet-y.vue')
 }
 ]
 

@@ -53,6 +53,7 @@ export default {
 .community-one{
     width: 100%;
     background-color: #f6f6f6;
+    margin-bottom:60px;
     .p{
         font-size: 20px;
         padding:40px 0;

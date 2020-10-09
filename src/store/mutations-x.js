@@ -10,6 +10,10 @@ const mutations = {
         state.vipProgram = payload.program;
         state.vipFooter = payload.footer;
     },
+    getMineList(state, payload) {
+        state.mineData = payload;
+        console.log(payload.img);
+    },
     changeColor(state, payload) {
         state.indNavColor = payload;
     },

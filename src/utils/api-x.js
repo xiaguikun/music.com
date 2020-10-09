@@ -17,6 +17,12 @@ export function getsubscribeData(params) {
 export function getIndVipData(params) {
     return http.get('/vip', params);
 }
+//yzy
+//请求我的页中icon数据
+export function getMineListData(params) {
+    return http.get('/mine', params)
+
+}
 
 export function getFCommunityData(params) {
     return http.get('/community-f', params);
