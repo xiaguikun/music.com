@@ -9,6 +9,11 @@ export function getIndLikeData(params) {
 }
 
 
+export function getsubscribeData(params){
+    return http.get('/subscribe',params);
+}
+
+
 export function getIndVipData(params) {
     return http.get('/vip', params);
 }

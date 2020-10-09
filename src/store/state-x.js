@@ -9,6 +9,7 @@ const state = {
     communityDataTwo: [],
     communityDataThree: [],
     communityDataFour: [],
+    subscribeData: {}
 }
 
 export default state;

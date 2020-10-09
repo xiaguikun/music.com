@@ -19,6 +19,9 @@ const mutations = {
         state.communityDataTwo = payload.two;
         state.communityDataThree = payload.three;
         state.communityDataFour = payload.four;
+    },
+    getSubscribe(state, payload) {
+        state.subscribeData = payload;
     }
 }
 
