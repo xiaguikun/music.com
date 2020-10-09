@@ -78,7 +78,12 @@ const routes = [{
 },{
     path:'/gq2',
     component:()=>import('../views/classify-g.vue')
-}]
+},
+{
+    path:'/fkc',
+    component:()=>import('../views/listenlist-f.vue')
+}
+]
 
 const router = new VueRouter({
     routes
