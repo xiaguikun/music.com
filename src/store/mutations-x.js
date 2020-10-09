@@ -16,6 +16,16 @@ const mutations = {
     },
     changeColor(state, payload) {
         state.indNavColor = payload;
+    },
+    getFCommunity(state, payload) {
+        state.communityDataOne = payload.one;
+        console.log(payload.one);
+        state.communityDataTwo = payload.two;
+        state.communityDataThree = payload.three;
+        state.communityDataFour = payload.four;
+    },
+    getSubscribe(state, payload) {
+        state.subscribeData = payload;
     }
 }
 

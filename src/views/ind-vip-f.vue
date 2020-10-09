@@ -233,6 +233,7 @@ export default {
             width: 100%;
             // overflow: auto;
             flex-wrap: wrap;
+            margin-bottom:60px;
             li{
                 flex-shrink: 0;
                 width: 93%;

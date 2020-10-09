@@ -12,6 +12,7 @@
                 <van-search v-model="value" placeholder="搜索" />
             </section>
         </div>
+        <router-view></router-view>
     </div>
 </template>
 
@@ -21,16 +22,16 @@ export default {
         return {
             navData:['广场','附近','好友','通知'],
             value:'',
-            activeIndex:'0'
+            activeIndex:'0',
+            activeUrl:['/community-one','/community-two','/community-three','/community-four']
         }
     },
     methods:{
         changeIndex(index){
             this.activeIndex=index;
-            console.log(1);
+            this.$router.push(this.activeUrl[index])
         }
     }
-    
 }
 </script>
 
@@ -66,6 +67,8 @@ export default {
                         width: 30px;
                         height: 3px;
                         background:red;
+                        margin-top:5px;
+                        border-radius:3px;
                     }
                 }
                 .van-search{

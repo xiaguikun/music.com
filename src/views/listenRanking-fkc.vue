@@ -88,6 +88,7 @@ export default {
     }},
     methods:  {
          onClickLeft() {
+             this.$router.go(-1);
          Toast('返回');
         },
      }

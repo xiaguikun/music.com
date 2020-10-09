@@ -21,7 +21,10 @@ const routes = [{
         component: () =>
             import ('../views/ind-x.vue'),
         children: [{
-            path: '/index',
+            path:'/index',
+            redirect:'/index-ind'
+        },{
+            path: '/index-ind',
             component: () =>
                 import ('../views/ind-recommed-x.vue')
         }, {
@@ -32,7 +35,29 @@ const routes = [{
     }, {
         path: '/community',
         component: () =>
-            import ('../views/community-x.vue')
+            import ('../views/community-x.vue'),
+        children:[
+            {
+                path:'/community',
+                redirect:'/community-one'
+            },
+            {
+                path:'/community-one',
+                component:()=>import('../components/community-one-f.vue')
+            },
+            {
+                path:'/community-two',
+                component:()=>import('../components/community-two-f.vue')
+            },
+            {
+                path:'/community-three',
+                component:()=>import('../components/community-three-f.vue')
+            },
+            {
+                path:'/community-four',
+                component:()=>import('../components/community-four-f.vue')
+            }
+        ]
     }, {
         path: '/subscribe',
         component: () =>
@@ -43,7 +68,7 @@ const routes = [{
             import ('../views/mine-y.vue')
     }]
 }, {
-    path: '/fkc1',
+    path: '/toRank',
     component: () =>
         import ('../views/listenRanking-fkc.vue')
 }, {
@@ -53,7 +78,12 @@ const routes = [{
 },{
     path:'/gq2',
     component:()=>import('../views/classify-g.vue')
-}]
+},
+{
+    path:'/fkc',
+    component:()=>import('../views/listenlist-f.vue')
+}
+]
 
 const router = new VueRouter({
     routes

@@ -6,6 +6,11 @@ const state = {
     vipFooter: [],
     mineData: [],
     indNavColor: ':#76b6ee',
+    communityDataOne: [],
+    communityDataTwo: [],
+    communityDataThree: [],
+    communityDataFour: [],
+    subscribeData: {}
 }
 
 export default state;

@@ -9,11 +9,22 @@ export function getIndLikeData(params) {
 }
 
 
+export function getsubscribeData(params){
+    return http.get('/subscribe',params);
+}
+
+
 export function getIndVipData(params) {
     return http.get('/vip', params);
 }
+<<<<<<< HEAD
 //yzy
 //请求我的页中icon数据
 export function getMineListData(params) {
     return http.get('/mine', params)
+=======
+
+export function getFCommunityData(params) {
+    return http.get('/community-f', params);
+>>>>>>> master
 }
