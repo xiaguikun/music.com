@@ -146,13 +146,16 @@ export default {
     }
     main {
         padding: 26px 0;
+        margin-bottom: 40px;
        
         .main-wrap{
             margin-top: 14px;
+            
             padding: 26px 0;
             height: 165px;
             background-color: #fff;
             h6 {
+                font-size: 16px;
                 margin-left: 20px;
             }
            
