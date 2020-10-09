@@ -21,7 +21,10 @@ const routes = [{
         component: () =>
             import ('../views/ind-x.vue'),
         children: [{
-            path: '/index',
+            path:'/index',
+            redirect:'/index-ind'
+        },{
+            path: '/index-ind',
             component: () =>
                 import ('../views/ind-recommed-x.vue')
         }, {

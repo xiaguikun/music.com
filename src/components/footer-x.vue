@@ -10,7 +10,7 @@
             <van-tabbar-item to="/community">
                  <template #icon="props">
                     <img :src="props.active ? icon2.active : icon2.inactive" />
-                    <span>首页</span>
+                    <span>社区</span>
                 </template>
             </van-tabbar-item>
             <van-tabbar-item>
@@ -77,6 +77,8 @@ export default {
 
 <style lang="less" scoped>
 .footer-x{
+    // width:100%;
+    height: 60px;
     position:fixed;
     left:0;
     bottom:0;

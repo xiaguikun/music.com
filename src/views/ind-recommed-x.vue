@@ -154,7 +154,7 @@ export default {
 .ind-recom-x{
     position:absolute;
     top:0;
-    bottom:30px;
+    bottom:60px;
     left:0;
     right:0;
      .recommed-x{
@@ -301,13 +301,9 @@ export default {
             width:100%;
             height:150px;
             margin-top:5px;
+            overflow:hidden;
             ul{
-                // width:100%;
-                // height:100%;
                 display: inline-flex;
-                flex-wrap: nowrap;
-                overflow:hidden;
-                // overflow: hidden;
                 li{
                     font-size:14px;
                     margin-left:15px;
