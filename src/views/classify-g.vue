@@ -22,16 +22,21 @@
                     </van-swipe-item>
                     
         </van-swipe>
-        <van-tree-select height="55vw" :items="items" :main-active-index.sync="active" class="classify-wrap">
+        <van-tree-select height="771px" :items="items" :main-active-index.sync="active" class="classify-wrap">
         <template #content>
-            <van-image
-            v-if="active === 0"
-            src="https://img.yzcdn.cn/vant/apple-1.jpg"
-            />
-            <van-image
+            <div v-for="(item,index) in sideBarData" :key="index">
+                <!-- {{active}}
+                {{item.type}} -->
+                 <div v-if="active == item.type">
+                    <van-image :src="item.imgUrl"/>
+                </div>
+           
+            </div>
+           
+            <!-- <van-image
             v-if="active === 1"
             src="https://img.yzcdn.cn/vant/apple-2.jpg"
-            />
+            /> -->
         </template>
 </van-tree-select>
     </div>
@@ -43,7 +48,7 @@ export default {
     data(){
         return {
             active: 0,
-            items: [{ text: '分组 1' }, { text: '分组 2' }],
+            items: [{ text: '热门' }, { text: 'VIP' }, { text: '儿童' }, { text: '音乐' }, { text: '英语' }, { text: '商业' }, { text: '娱乐' }, { text: '感情' }, { text: '历史' }, { text: '其他' }],
         }
     },
     computed:{
@@ -62,7 +67,7 @@ export default {
     mounted(){
 
         this.$store.dispatch('getClassifyDa', {
-      type: this.type
+        type: this.type
     })
     console.log(this.type);
     }
