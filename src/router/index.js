@@ -108,6 +108,27 @@ const routes = [{
 {
     path:'/fkc2',
     component:()=>import('../views/myshoucang-f.vue')
+},{
+    path:'/gq3',
+    component:()=>import('../views/myshengyin-g.vue')
+},{
+    path:'/c2',
+    component:()=>import('../views/qianbao-c.vue')
+},{
+    path:'/c3',
+    component:()=>import('../views/zhanghao-c.vue')
+},{
+    path:'/c4',
+    component:()=>import('../views/yinsi-c.vue')
+},{
+    path:'/c5',
+    component:()=>import('../views/dongtai-c.vue')
+},{
+    path:'/c6',
+    component:()=>import('../views/xiaoxi-c.vue')
+},{
+    path:'/c7',
+    component:()=>import('../views/yinzhi-c.vue')
 }
 ]
 
