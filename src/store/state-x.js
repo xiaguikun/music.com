@@ -1,4 +1,5 @@
 const state = {
+    myVoiceList: [],
     likeData: [],
     classifyData: [],
     sideBarData: [],

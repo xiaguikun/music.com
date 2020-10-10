@@ -1,4 +1,4 @@
-import { getIndLikeData, getIndVipData, getsubscribeData, getFCommunityData, getListenListData, getMineListData, getClassifyData } from "../utils/api-x"
+import { getIndLikeData, getIndVipData, getMyVoiceData, getsubscribeData, getFCommunityData, getListenListData, getMineListData, getClassifyData } from "../utils/api-x"
 const actions = {
     async getIndLike({ commit }) {
         const res = await getIndLikeData();
@@ -39,6 +39,12 @@ const actions = {
         const res = await getListenListData();
         console.log(res);
         commit('getListenList', res.data);
-    }
+    },
+    async getMyVoiceList({ commit }) {
+        const res = await getMyVoiceData();
+        console.log(res);
+        commit('MyVoiceList', res.data);
+    },
+
 }
 export default actions;

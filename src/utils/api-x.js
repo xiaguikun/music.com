@@ -36,3 +36,8 @@ export function getFCommunityData(params) {
 export function getListenListData(params) {
     return http.get('/listenlist', params);
 }
+
+// myvoice 数据
+export function getMyVoiceData(params) {
+    return http.get('/myvoice', params);
+}
