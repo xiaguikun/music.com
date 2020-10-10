@@ -5,6 +5,7 @@ import store from './store'
 
 import "./assets/reset.less"
 import "amfe-flexible";
+import "./assets/style.less"
 
 import { Tabbar, TabbarItem, Search, Icon, NavBar, Swipe, SwipeItem, Lazyload, Collapse, CollapseItem } from 'vant';
 

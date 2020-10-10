@@ -14,6 +14,11 @@ const mutations = {
         state.mineData = payload;
         console.log(payload.img);
     },
+    getShopList(state, payload) {
+        state.shop1Data = payload.read;
+        state.shop2Data = payload.song;
+        console.log(payload);
+    },
     changeColor(state, payload) {
         state.indNavColor = payload;
     },

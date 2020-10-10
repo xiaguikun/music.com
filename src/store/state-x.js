@@ -5,6 +5,8 @@ const state = {
     vipProgram: [],
     vipFooter: [],
     mineData: [],
+    shop1Data: [],
+    shop2Data: [],
     indNavColor: ':#76b6ee',
     communityDataOne: [],
     communityDataTwo: [],

@@ -8,7 +8,7 @@
         <div class="head">
             <img src="http://pic.90sjimg.com/back_pic/u/00/24/84/32/561dc90ed93f6.jpg" alt="" class="head-bk">
             <div class="head-wrap">
-                <img src="https://img2.woyaogexing.com/2020/03/01/bd40cc6ac0ac4454b573de95890a7a36!400x400.jpeg" alt="" class="head-avatar">
+                <img src="../images/images/touxiang.jpg" alt="" class="head-avatar">
                 <h6>原来是雅典娜啊!</h6>
                 <p>关注 38 | 粉丝 37</p>
             </div>
