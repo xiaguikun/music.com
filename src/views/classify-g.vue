@@ -16,45 +16,24 @@
                
             </div>
         </div>
-
-
-<van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
-            <van-swipe-item v-for="(item,index) in classifyData" :key="index" >
-                <img :src="item.url" alt="" class="im1">
-            </van-swipe-item>
-            
-</van-swipe>
-
-<div class="content">
-    <van-sidebar v-model="activeKey" @change="change">
-        <van-sidebar-item :title="item" v-for="(item, index) in list" :key="index"/>
-    </van-sidebar>
-<ul class="main-content">
-    <li v-for="(item,index) in sideBarData" :key="index" class="list">
-       <p class="min" >
-           <img src="../images/icon/路径3@3x.png"  v-if="index==0" class="img1">
-           <img src="../images/icon/路径备份@3x.png"  v-if="index==1" class="img1">
-           <img src="../images/icon/路径备份 4@3x.png"  v-if="index==2" class="img1">
-           <span v-if="index==0" class="count">{{index+1}}</span>
-           <span v-if="index==1" class="count">{{index+1}}</span>
-           <span v-if="index==2" class="count">{{index+1}}</span>
-       </p>
-       <div class="con">
-           <img :src="item.imgUrl" alt="" class="img2">
-            <div class="text">
-                <p class="ti">{{item.title}}</p>
-                <p class="te">{{item.text}}</p>
-                <div class="hot">
-                    <img src="../images/icon/形状备份 17@3x.png" alt="" class="imi">
-                    <span class="s">{{item.num}}</span>
-                    <img src="../images/icon/形状备份 -2@3x.png" alt="" class="imi">
-                    <span class="s">{{item.coll}}</span>
-                </div>
-            </div>
-       </div>
-    </li>
-</ul>
-</div>
+        <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
+                    <van-swipe-item v-for="(item,index) in classifyData" :key="index" >
+                        <img :src="item.url" alt="" class="im1">
+                    </van-swipe-item>
+                    
+        </van-swipe>
+        <van-tree-select height="55vw" :items="items" :main-active-index.sync="active" class="classify-wrap">
+        <template #content>
+            <van-image
+            v-if="active === 0"
+            src="https://img.yzcdn.cn/vant/apple-1.jpg"
+            />
+            <van-image
+            v-if="active === 1"
+            src="https://img.yzcdn.cn/vant/apple-2.jpg"
+            />
+        </template>
+</van-tree-select>
     </div>
 </template>
 <script>
@@ -63,11 +42,8 @@ import {mapState}  from 'vuex';
 export default {
     data(){
         return {
-          activeKey: sessionStorage.getItem('activeKey') || 0,
-          type: sessionStorage.getItem('type') || '1',
-        // type:'1',
-        //   activeKey: 0,
-          list: ['热门', 'VIP', '儿童','音乐','英语','商业','娱乐','人文','感情','历史','其他']
+            active: 0,
+            items: [{ text: '分组 1' }, { text: '分组 2' }],
         }
     },
     computed:{
@@ -77,31 +53,13 @@ export default {
         ])
     },
     methods:{
-         change(index) {
-            //  console.log(index);
-      this.type = index + 1 + '';
-      sessionStorage.setItem('activeKey', this.activeKey);
-      sessionStorage.setItem('type', this.type);
-      this.$store.dispatch('getClassifyDa', {
-        type: this.type
-      });
-    //   console.log(this.type);
-    },
         goback(){
             this.$router.go(-1);
         },
-        // getData(){
-        //     this.$store.dispatch('getClassifyDa',{
-        //         type:this.type
-        //     });
-        // },
-        // ...mapActions([
-        //     'getClassifyDa'
-        // ]),
+       
       
     },
     mounted(){
-        // this.getData();
 
         this.$store.dispatch('getClassifyDa', {
       type: this.type
@@ -113,103 +71,17 @@ export default {
 
 <style lang="less" scoped>
 .classify{
-    
-   .content{
-       margin-top:90px;
-       display:flex;
-       .main-content{
-        //    background:red;
-           flex: 1;
-           display :flex;
-           flex-wrap: wrap;
-           .list{
-               width:100%;
-               height:160px;
-               margin-bottom:20px;
-            //    background:blue;
-               display:flex;
-               margin-right:10px;   
-               justify-content: flex-end;
-               .min{
-                   margin-top:30px;
-                   margin-right:5px;
-                   position: relative;
-                   .img1{
-                       width:30px;
-                       height:30px;
-                   }
-                   .count{
-                       position: absolute;
-                       top:15px;
-                       left:10px;
-                       font-size:16px;
-                       color:white;
+    .classify-wrap {
+        position: absolute;
+        top: 300px;
+        left: 0px;
 
-                   }
-               }
-               .con{
-                   margin-left:10px;
-                   display:flex;
-                   align-items:center;
-                   justify-content: flex-end;
-                   border-bottom:1px solid #e4e4e4;
-                   border-radius:20px;
-                   .img2{
-                   width:100px;
-                   height:100px;
-                   border-radius:20px;
-               }
-               .text{
-                   margin-left:10px;
-                   width:120px;
-                   .hot{
-                       display:flex;
-                       margin-top:10px;
-                       width:100%;
-                       justify-content: space-between;
-                       align-items:center;
-                        .imi{
-                            width:12px;
-                            height:12px;
-                        }
-                        .s{
-                            font-size:12px;
-                        }
-                   }
-                   .ti{
-                       font-size:14px;
-                       font-weight: 900;;
-                       height:20px;
-                       color:black;
-                       line-height:20px;
-                       margin-bottom:10px;
-                   }
-                   .te{
-                       color:#919191;
-                       font-size:12px;
-                       line-height:18px;
-                   }
-               }
-               }
-
-           }
-       }
-        .van-sidebar{
-        
-        .van-sidebar-item{
-            margin-bottom:2px;
-        }
-        .van-sidebar-item--select::before{
-       background-color:transparent;
-   } 
     }
-   }
    .van-swipe{
        position: absolute;
        top:90px;
        left:50%;
        transform:translate(-50%,0);
-    //    margin-left:40px;
        border-radius:30px;
        width:84%;
    }
