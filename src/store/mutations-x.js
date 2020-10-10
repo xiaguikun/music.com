@@ -28,10 +28,6 @@ const mutations = {
         state.shop2Data = payload.song;
         console.log(payload);
     },
-    changeColor(state, payload) {
-        state.indNavColor = payload;
-    },
-
     getFCommunity(state, payload) {
         state.communityDataOne = payload.one;
         console.log(payload.one);
