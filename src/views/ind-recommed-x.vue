@@ -18,7 +18,7 @@
             </van-swipe>
         </div>
         <ul class="four">
-            <li @click="toRanking">
+            <li @click="toRanking1">
                 <van-icon name="send-gift-o"/>
                 <p>每日推荐</p>
             </li>
@@ -26,7 +26,7 @@
                 <van-icon name="bar-chart-o"/>
                 <p>收听排行</p>
             </li>
-            <li @click="toRanking">
+            <li @click="toRanking1">
                 <van-icon name="music-o"/>
                 <p>助眠解压</p>
             </li>
@@ -124,6 +124,9 @@ export default {
         },
         toRanking(){
             this.$router.push('/toRank')
+        },
+        toRanking1(){
+            this.$router.push('/tingdan')
         }
     },
     mounted(){

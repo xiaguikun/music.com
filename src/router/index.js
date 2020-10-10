@@ -93,7 +93,7 @@ const routes = [{
     component:()=>import('../views/classify-g.vue')
 },
 {
-    path:'/fkc',
+    path:'/tingdan',
     component:()=>import('../views/listenlist-f.vue')
 },{
     path:'/yzy1',

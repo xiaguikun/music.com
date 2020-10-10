@@ -95,6 +95,9 @@ export default {
   methods:{
       getIndVip(){
           this.$store.dispatch('getIndVip')
+      },
+      onClickLeft(){
+          this.$router.go(-1);
       }
   },
   mounted(){
