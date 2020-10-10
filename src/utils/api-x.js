@@ -8,6 +8,11 @@ export function getIndLikeData(params) {
     return http.get('/like', params);
 }
 
+//获得classify页的数据
+export function getClassifyData(params) {
+    return http.get('/classify', params);
+}
+
 
 export function getsubscribeData(params) {
     return http.get('/subscribe', params);

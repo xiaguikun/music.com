@@ -8,7 +8,7 @@ import "./assets/vannavbar.less";
 import "./assets/set-c/mine-c.less"
 import "amfe-flexible";
 
-import { Tabbar, TabbarItem, Search, Icon, NavBar, Swipe, SwipeItem, Lazyload, Collapse, CollapseItem,Cell, CellGroup,Switch,Button,Image as VanImage  } from 'vant';
+import { Tabbar, TabbarItem, Search, Icon, NavBar, Swipe, SwipeItem, Lazyload, Collapse, CollapseItem,Cell, CellGroup,Switch,Button,Image as VanImage ,Sidebar,SidebarItem } from 'vant';
 
 Vue.use(Tabbar);
 Vue.use(TabbarItem);
@@ -25,6 +25,8 @@ Vue.use(CellGroup);
 Vue.use(Switch);
 Vue.use(Button);
 Vue.use(VanImage);
+Vue.use(Sidebar);
+Vue.use(SidebarItem);
 
 
 Vue.config.productionTip = false
