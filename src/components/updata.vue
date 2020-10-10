@@ -37,6 +37,7 @@ export default {
 .updata-f{
     float: left;
     width: 100%;
+    margin-bottom: 50px;
     .updataMain{
         float: left;
         padding: 20px;
@@ -44,6 +45,8 @@ export default {
         background-color: #f6f6f6;
         margin: 0 5%;
         display: flex;
+        border-radius: 15px;
+        margin-top: 25px;
         .img-left{
             width: 110px;
             height: 110px;
