@@ -98,6 +98,9 @@ const routes = [{
 },{
     path:'/yzy1',
     component:()=>import('../views/shopYet-y.vue')
+},{
+    path:'/c1',
+    component:()=>import('../views/set-c.vue')
 }
 ]
 
