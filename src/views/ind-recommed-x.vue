@@ -18,19 +18,19 @@
             </van-swipe>
         </div>
         <ul class="four">
-            <li>
+            <li @click="toRanking">
                 <van-icon name="send-gift-o"/>
                 <p>每日推荐</p>
             </li>
-            <li>
+            <li @click="toRanking">
                 <van-icon name="bar-chart-o"/>
                 <p>收听排行</p>
             </li>
-            <li>
+            <li @click="toRanking">
                 <van-icon name="music-o"/>
                 <p>助眠解压</p>
             </li>
-            <li>
+            <li @click="toRanking">
                 <van-icon name="qr"/>
                 <p>经典必听</p>
             </li>
@@ -89,7 +89,7 @@
 </template>
 
 <script>
-// import BetterScroll from 'better-scroll';
+import BetterScroll from 'better-scroll';
 
 export default {
     data(){
@@ -105,23 +105,30 @@ export default {
         getIndLikeData(){
             this.$store.dispatch('getIndLike')
         },
-        async addBetterScroll(){
-            await this.$nextTick();
-            // new BetterScroll('.ind-recom-x',{
-            //     scrollY:true,
-            //     scrollX:false,
-            //     click:true
-            // })
-            // new BetterScroll('.p1-ul',{
-            //     scrollY:true,
-            //     scrollX:false,
-            //     click:true
-            // })
+        addBetterScroll(){
+            new BetterScroll('.ind-recom-x',{
+                scrollY:true,
+                scrollX:false,
+                click:true
+            });
+            new BetterScroll('.p1-ul',{
+                scrollY:false,
+                scrollX:true,
+                click:true
+            });
+            new BetterScroll('.p2-ul',{
+                scrollY:false,
+                scrollX:true,
+                click:true
+            })
+        },
+        toRanking(){
+            this.$router.push('/toRank')
         }
     },
     mounted(){
         this.getIndLikeData();
-        this.addBetterScroll();
+        // this.addBetterScroll();
     },
     computed:{
         likeData(){
@@ -133,6 +140,12 @@ export default {
         storyData(){
             return this.$store.state.likeData.story;
         }
+    },
+    watch: {
+        async storyData() {
+            await this.$nextTick();
+            this.addBetterScroll();
+        }
     }
 }
 </script>
@@ -141,7 +154,7 @@ export default {
 .ind-recom-x{
     position:absolute;
     top:0;
-    bottom:30px;
+    bottom:60px;
     left:0;
     right:0;
      .recommed-x{
@@ -288,16 +301,13 @@ export default {
             width:100%;
             height:150px;
             margin-top:5px;
+            overflow:hidden;
             ul{
-                width:100%;
-                height:100%;
-                display:flex;
-                flex-shrink:0;
-                overflow:auto;
-                // overflow: hidden;
+                display: inline-flex;
                 li{
                     font-size:14px;
                     margin-left:15px;
+                    width:25%;
                     p{
                         margin-top:10px;
                     }
@@ -306,6 +316,9 @@ export default {
                     }
                 }
             }
+        }
+        .p2-ul{
+            margin-bottom:50px;
         }
     }
 }

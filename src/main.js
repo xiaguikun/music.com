@@ -3,7 +3,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-import "./assets/reset.less"
+import "./assets/reset.less";
+import "./assets/vannavbar.less";
 import "amfe-flexible";
 
 import { Tabbar, TabbarItem, Sidebar, SidebarItem, Search, Icon, NavBar, Swipe, SwipeItem, Lazyload, Collapse, CollapseItem } from 'vant';
