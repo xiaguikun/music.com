@@ -140,7 +140,7 @@ export default {
                    }
                    .count{
                        position: absolute;
-                       top:10px;
+                       top:15px;
                        left:10px;
                        font-size:16px;
                        color:white;
@@ -148,6 +148,7 @@ export default {
                    }
                }
                .con{
+                   margin-left:10px;
                    display:flex;
                    align-items:center;
                    justify-content: flex-end;
@@ -159,7 +160,7 @@ export default {
                    border-radius:20px;
                }
                .text{
-                   margin-left:4px;
+                   margin-left:10px;
                    width:120px;
                    .hot{
                        display:flex;
@@ -176,12 +177,17 @@ export default {
                         }
                    }
                    .ti{
-                       font-size:16px;
+                       font-size:14px;
+                       font-weight: 900;;
+                       height:20px;
                        color:black;
+                       line-height:20px;
+                       margin-bottom:10px;
                    }
                    .te{
                        color:#919191;
-                       font-size:14px;
+                       font-size:12px;
+                       line-height:18px;
                    }
                }
                }
@@ -201,7 +207,9 @@ export default {
    .van-swipe{
        position: absolute;
        top:90px;
-       margin-left:40px;
+       left:50%;
+       transform:translate(-50%,0);
+    //    margin-left:40px;
        border-radius:30px;
        width:84%;
    }
@@ -265,12 +273,13 @@ export default {
         background:#8097bc;
         .back{
              font-size:26px;
+             margin-left:30px;
              color:white;
         }
         .c{
             font-size:16px;
             color:white;
-            margin-left:160px;
+            margin-left:130px;
         }
 
     }
