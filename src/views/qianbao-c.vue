@@ -4,6 +4,7 @@
         title="钱包"
         :fixed="true"
         left-arrow
+        @click-left="onClickLeft"
         :placeholder="true"
       /> 
     <div class="money-bg">
@@ -43,7 +44,15 @@
  </div>
 </template>
   
-
+<script>
+export default {
+    methods:{
+        onClickLeft(){
+            this.$router.go(-1);
+        }
+    }
+}
+</script>
 <style lang="less">
   .mine-set{
     position:relative;

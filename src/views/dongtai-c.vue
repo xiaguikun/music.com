@@ -5,7 +5,7 @@
         :fixed="true"
         left-arrow
         :placeholder ="true"
-        
+        @click-left="onClickLeft"
       />
       <van-cell-group>
         <van-cell title="好友动态" />
@@ -22,6 +22,15 @@
  </div>
 </template>
 
+<script>
+export default {
+  methods:{
+    onClickLeft(){
+      this.$router.go(-1);
+    }
+  }
+}
+</script>
 <style lang="less">
   .mine-set{
     position:relative;

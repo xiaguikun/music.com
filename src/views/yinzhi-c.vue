@@ -5,7 +5,7 @@
         :fixed="true"
         left-arrow
         :placeholder="true"
-        
+        @click-left="onClickLeft"
       />
       <van-cell-group>
         <van-cell title="在线音质" />
@@ -56,7 +56,13 @@ export default {
       checked5: false,
       checked6: true
   }
-}}
+},
+ methods:{
+        onClickLeft(){
+            this.$router.go(-1);
+        }
+    }
+}
 </script>
 
 

@@ -2,7 +2,7 @@
     <div class="mine-y">
         <div  v-for="(item,index) in mineData" :key="index">
             <header v-if="index == 0">我的
-                <img :src="item.url" alt="" v-if="index == 0" class="setting">
+                <img :src="item.url" alt="" v-if="index == 0" class="setting" @click="to1">
             </header> 
         </div>
         <div class="head">
@@ -21,7 +21,7 @@
             <div class="main-wrap">
                 <h6>我的功能</h6>
                 <nav>
-                    <section v-for="(item,index) in mineData" :key="index" v-show="(index > 0) && (index < 5)">
+                    <section v-for="(item,index) in mineData" :key="index" v-show="(index > 0) && (index < 5)" @click="toAll(index)">
                         <img :src="item.url" alt="" v-if="(index > 0) && (index < 5) " class="setting">
                         <span>{{item.title}}</span>
                     </section>
@@ -30,7 +30,9 @@
              <div class="main-wrap">
                 <h6>我的服务</h6>
                 <nav>
-                    <section v-for="(item,index) in mineData" :key="index" v-show="(index > 4) && (index < 9)">
+                    <section v-for="(item,index) in mineData" :key="index" v-show="(index > 4) && (index < 9)" 
+                    @click="toAll(index)"
+                    >
                         <img :src="item.url" alt="" v-if="(index > 4) && (index < 9) " class="setting">
                         <span>{{item.title}}</span>
                     </section>
@@ -59,6 +61,32 @@ export default {
      methods:{
         getMineListData(){
             this.$store.dispatch('getMineList')
+        },
+        to1(){
+            this.$router.push('/shezhi');
+        },
+        toAll(index){
+            if(index==1){
+                this.$router.push('/myvip');
+            }
+            if(index==2){
+                this.$router.push('/shoucang');
+            }
+            if(index==3){
+                this.$router.push('/shengyin');
+            }
+            if(index==4){
+                // this.$router.push('/');
+            }
+            if(index==5){
+                // this.$router.push('/');
+            }
+            if(index==6){
+                // this.$router.push('/');
+            }
+            if(index==7){
+                this.$router.push('/qianbao');
+            }
         }
      },
      mounted(){

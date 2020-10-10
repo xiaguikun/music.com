@@ -5,6 +5,7 @@
         right-text="编辑"
         left-arrow
         @click-right="onClickRight"
+        @click-left="onClickLeft"
         />
         <div class="content">
             <img v-if="done1 === 1" src="../images/icon/下拉备份3@3x.png" alt="" @click="change" class="img-001">
@@ -109,6 +110,9 @@ export default
         change3(){
             this.done6*=-1;
             this.done7*=-1;
+        },
+        onClickLeft(){
+            this.$router.go(-1);
         }
     },
 }

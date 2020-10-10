@@ -5,7 +5,7 @@
         :fixed="true"
         left-arrow
         :placeholder ="true"
-        
+        @click-left="onClickLeft"
     />
     <van-cell-group>
       <van-cell center title="允许通知">
@@ -70,6 +70,11 @@ export default {
       checked8: false,
     };
   },
+  methods:{
+        onClickLeft(){
+            this.$router.go(-1);
+        }
+    }
 };
 </script>
 <style lang="less">
