@@ -52,9 +52,9 @@ export default {
   data() {
     return {
       checked: true,
-      checked1:true,
-      checked2:true,
-      checked3:true
+      checked1:false,
+      checked2:false,
+      checked3:false
     };
   }
 };
