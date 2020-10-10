@@ -50,10 +50,10 @@ export default {
   data() {
     return {
       checked1: true,
-      checked2: true,
-      checked3: true,
-      checked4: true,
-      checked5: true,
+      checked2: false,
+      checked3: false,
+      checked4: false,
+      checked5: false,
       checked6: true
   }
 }}

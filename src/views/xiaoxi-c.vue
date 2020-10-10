@@ -67,7 +67,7 @@ export default {
       checked5: true,
       checked6: true,
       checked7: true,
-      checked8: true,
+      checked8: false,
     };
   },
 };
