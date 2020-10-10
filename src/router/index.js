@@ -85,7 +85,7 @@ const routes = [{
     component: () =>
         import ('../views/listenRanking-fkc.vue')
 }, {
-    path: '/gq1',
+    path: '/lishi',
     component: () =>
         import ('../views/history-g.vue')
 },{
@@ -96,7 +96,7 @@ const routes = [{
     path:'/tingdan',
     component:()=>import('../views/listenlist-f.vue')
 },{
-    path:'/yzy1',
+    path:'/yigou',
     component:()=>import('../views/shopYet-y.vue')
 },{
     path:'/shezhi',

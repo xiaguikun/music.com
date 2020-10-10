@@ -53,7 +53,7 @@ export default {
     methods: {
         onClickLeft() {
         Toast('返回');
-
+        this.$router.go(-1);
         },
         onClickRight() {
         Toast('按钮');

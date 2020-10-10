@@ -5,6 +5,7 @@
         right-text="编辑"
         left-arrow
         @click-right="onClickRight"
+          @click-left="onClickLeft"
         />
         <p class="p-1">我收藏的声音</p>
         <div class="content">
@@ -128,6 +129,9 @@ export default {
     change4(){
         this.done8*=-1;
         this.done9*=-1;
+    },
+    onClickLeft(){
+        this.$router.go(-1);
     }
     },
     }

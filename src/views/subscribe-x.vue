@@ -13,19 +13,19 @@
         </div>
         <div class="nav">
             <ul class="nav-ul">
-                <li>
+                <li @click="to1">
                     <van-icon name="orders-o" />
                     <p>听单</p>
                 </li>
-                <li>
+                <li @click="to2">
                     <van-icon name="cart-o" />
                     <p>已购</p>
                 </li>
-                <li>
+                <li @click="to3">
                     <van-icon name="passed" />
                     <p>下载</p>
                 </li>
-                <li>
+                <li @click="to3">
                     <van-icon name="clock-o" />
                     <p>历史</p>
                 </li>
@@ -63,6 +63,15 @@ export default {
         changeIndex(index){
             this.activeIndex=index;
             this.$router.push(this.toUrl[index]);
+        },
+        to1(){
+            this.$router.push('/tingdan')
+        },
+        to2(){
+            this.$router.push('/yigou')
+        },
+        to3(){
+            this.$router.push('/lishi')
         }
     },
     mounted(){
