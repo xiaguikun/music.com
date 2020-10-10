@@ -5,11 +5,11 @@
         :fixed="true"
         left-arrow
         :placeholder ="true"
-        
+        @click-left="onClickLeft"
       />
     <van-cell-group>
       <van-cell title="加好友方式" is-link />
-      <van-cell title="动态权限" is-link />
+      <van-cell title="动态权限" is-link @click.native="toOne"/>
       <van-cell  title="允许陌生人赞我">
         <template #right-icon>
           <van-switch v-model="checked1" size="24" />
@@ -50,6 +50,14 @@ export default {
 
     };
   },
+  methods:{
+    onClickLeft(){
+      this.$router.go(-1);
+    },
+    toOne(){
+      this.$router.push('/dongtai')
+    }
+  }
 };
 </script>
 <style lang="less">

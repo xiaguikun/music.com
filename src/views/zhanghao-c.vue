@@ -5,7 +5,7 @@
         :fixed="true"
         left-arrow
         :placeholder ="true"
-        
+        @click-left="onClickLeft"
       />
     <van-cell-group>
         <van-cell title="头像"  is-link center>
@@ -33,6 +33,15 @@
   </div>
 </template>
 
+<script>
+export default {
+  methods:{
+    onClickLeft(){
+      this.$router.go(-1);
+    }
+  }
+}
+</script>
 
 <style lang="less" scoped>
   .mine-set{
