@@ -3,6 +3,15 @@ const mutations = {
         state.likeData = payload;
         console.log(payload.like);
     },
+    changeColor(state, payload) {
+        state.indNavColor = payload;
+    },
+    getClassifyDa(state, payload) {
+        state.classifyData = payload;
+    },
+    getSideBarData(state, payload) {
+        state.sideBarData = payload.data.sideBar;
+    },
     getIndVip(state, payload) {
         state.vipData = payload.card;
         console.log(payload.card);
@@ -22,6 +31,7 @@ const mutations = {
     changeColor(state, payload) {
         state.indNavColor = payload;
     },
+
     getFCommunity(state, payload) {
         state.communityDataOne = payload.one;
         console.log(payload.one);
@@ -31,6 +41,9 @@ const mutations = {
     },
     getSubscribe(state, payload) {
         state.subscribeData = payload;
+    },
+    getListenList(state, payload) {
+        state.listenlistData = payload.list1;
     }
 }
 

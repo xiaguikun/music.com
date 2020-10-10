@@ -60,8 +60,21 @@ const routes = [{
         ]
     }, {
         path: '/subscribe',
-        component: () =>
-            import ('../views/subscribe-x.vue')
+        component: () =>import ('../views/subscribe-x.vue'),
+        children:[
+            {
+                path:'/subscribe',
+                redirect:'/take'
+            },
+            {
+                path:'/take',
+                component:()=>import('../components/take.vue')
+            },
+            {
+                path:'/updata',
+                component:()=>import('../components/updata.vue')
+            }
+        ]
     }, {
         path: '/mine',
         component: () =>
@@ -85,6 +98,37 @@ const routes = [{
 },{
     path:'/yzy1',
     component:()=>import('../views/shopYet-y.vue')
+},{
+    path:'/c1',
+    component:()=>import('../views/set-c.vue')
+},{
+    path:'/fkc1',
+    component:()=>import('../views/myvip-f.vue')
+},
+{
+    path:'/fkc2',
+    component:()=>import('../views/myshoucang-f.vue')
+},{
+    path:'/gq3',
+    component:()=>import('../views/myshengyin-g.vue')
+},{
+    path:'/c2',
+    component:()=>import('../views/qianbao-c.vue')
+},{
+    path:'/c3',
+    component:()=>import('../views/zhanghao-c.vue')
+},{
+    path:'/c4',
+    component:()=>import('../views/yinsi-c.vue')
+},{
+    path:'/c5',
+    component:()=>import('../views/dongtai-c.vue')
+},{
+    path:'/c6',
+    component:()=>import('../views/xiaoxi-c.vue')
+},{
+    path:'/c7',
+    component:()=>import('../views/yinzhi-c.vue')
 }
 ]
 

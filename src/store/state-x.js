@@ -1,5 +1,8 @@
 const state = {
     likeData: [],
+    classifyData: [],
+    sideBarData: [],
+    type: '1',
     vipData: [],
     vipRecommend: [],
     vipProgram: [],
@@ -12,7 +15,8 @@ const state = {
     communityDataTwo: [],
     communityDataThree: [],
     communityDataFour: [],
-    subscribeData: {}
+    subscribeData: {},
+    listenlistData: [],
 }
 
 export default state;

@@ -1,12 +1,11 @@
 <template>
-   <div class="listenlist">
+   <div class="myshoucang-f">
        <van-nav-bar
-        title="听单"
+        title="我收藏"
         right-text="编辑"
         left-arrow
         @click-right="onClickRight"
         />
-        <p class="p-1">我收藏的声音</p>
         <div class="content">
             <img v-if="done1 === 1" src="../images/icon/下拉备份3@3x.png" alt="" @click="change" class="img-001">
             <img v-if="done1 === -1" src="../images/icon/下拉备份 6@3x.png" alt="" @click="change" class="img-002">
@@ -34,8 +33,8 @@
             </div>
         </div>
         <div class="content">
-            <img v-if="done4 === 1" src="../images/icon/下拉备份3@3x.png" alt="" @click="change2" class="img-001">
-            <img v-if="done4 === -1" src="../images/icon/下拉备份 6@3x.png" alt="" @click="change2" class="img-002">
+            <img v-if="done4 === 1" src="../images/icon/下拉备份3@3x.png" alt="" @click="change2"  class="img-001">
+            <img v-if="done4 === -1" src="../images/icon/下拉备份 6@3x.png" alt="" @click="change2"  class="img-002">
             <span>工作技巧</span>
             <span>20</span>
         </div>
@@ -47,27 +46,12 @@
             </div>
         </div>
         <div class="content">
-            <img v-if="done6 === 1" src="../images/icon/下拉备份3@3x.png" alt="" @click="change3" class="img-001">
-            <img v-if="done6 === -1" src="../images/icon/下拉备份 6@3x.png" alt="" @click="change3" class="img-002">
+            <img v-if="done6 === 1" src="../images/icon/下拉备份3@3x.png" alt="" @click="change3"  class="img-001">
+            <img v-if="done6 === -1" src="../images/icon/下拉备份 6@3x.png" alt="" @click="change3"  class="img-002">
             <span>明星</span>
             <span>12</span>
         </div>
         <div v-if="done7 === 1">
-            <div class="main" v-for="(item,index) in listenlistData" :key="index" >  
-                <img :src="item.img" alt="" >
-                <p>{{ item.title }}</p>
-                <p>{{ item.content }}</p>
-            </div>
-        </div>
-        <p class="p-2">我喜欢的听单</p>
-        <p class="p-3">大有的收藏</p>
-        <div class="content">
-            <img v-if="done8 === 1" src="../images/icon/下拉备份3@3x.png" alt="" @click="change4" class="img-001">
-            <img v-if="done8 === -1" src="../images/icon/下拉备份 6@3x.png" alt="" @click="change4" class="img-002">
-            <span>最喜欢</span>
-            <span>4</span>
-        </div>
-        <div v-if="done9 === 1">
             <div class="main" v-for="(item,index) in listenlistData" :key="index" >  
                 <img :src="item.img" alt="" >
                 <p>{{ item.title }}</p>
@@ -79,8 +63,10 @@
 
 <script>
 import { Toast } from 'vant';
-export default {
-    data() {
+export default 
+{
+    data() 
+    {
       return {
           done:-1,
           done1:1,
@@ -90,10 +76,8 @@ export default {
           done5:-1,
           done6:1,
           done7:-1,
-          done8:1,
-          done9:-1
-      };
-     },
+            };
+    },
     mounted(){
       this.getListenListData();
     },
@@ -102,44 +86,37 @@ export default {
           return this.$store.state.listenlistData;
       },
     },
-    methods: {
-    onClickRight() {
-      Toast('按钮');
+    methods: 
+    {
+        onClickRight() {
+            Toast('按钮');
+        },
+        getListenListData(){
+            this.$store.dispatch('getListenList')
+        },
+        change(){
+            this.done*=-1;
+            this.done1*=-1;
+        },
+        change1(){
+            this.done2*=-1;
+            this.done3*=-1;
+        },
+        change2(){
+            this.done4*=-1;
+            this.done5*=-1;
+        },
+        change3(){
+            this.done6*=-1;
+            this.done7*=-1;
+        }
     },
-    getListenListData(){
-        this.$store.dispatch('getListenList')
-    },
-    change(){
-        this.done*=-1;
-        this.done1*=-1;
-    },
-    change1(){
-        this.done2*=-1;
-        this.done3*=-1;
-    },
-    change2(){
-        this.done4*=-1;
-        this.done5*=-1;
-    },
-    change3(){
-        this.done6*=-1;
-        this.done7*=-1;
-    },
-    change4(){
-        this.done8*=-1;
-        this.done9*=-1;
-    }
-    },
-    }
+}
 </script>
 <style lang='less' scoped>
-.listenlist{
+.myshoucang-f{
     .van-nav-bar{
         background-color: #fd6b95;
-    }
-    .p-1{
-        font-size: 20px;
-        margin: 20px 0 20px 15px;
     }
     .p-2{
         font-size: 20px;

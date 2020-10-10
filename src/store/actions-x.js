@@ -1,9 +1,19 @@
-import { getIndLikeData, getIndVipData, getsubscribeData, getFCommunityData, getMineListData, getShopListData } from "../utils/api-x"
+import { getIndLikeData, getIndVipData, getsubscribeData, getFCommunityData, getListenListData, getMineListData, getClassifyData, getShopListData } from "../utils/api-x"
 const actions = {
     async getIndLike({ commit }) {
-        const res = await getIndLikeData()
-        console.log(res);
+        const res = await getIndLikeData();
         commit('getIndLike', res.data);
+    },
+
+    async getClassifyDa({ commit }, payload) {
+        const res = await getClassifyData({
+            type: payload.type
+        });
+        console.log(res);
+        // console.log(res.data.sideBar);
+        commit('getClassifyDa', res.data.imgUrl);
+
+        commit('getSideBarData', res);
     },
     async getIndVip({ commit }) {
         const res = await getIndVipData()
@@ -29,6 +39,11 @@ const actions = {
         const res = await getsubscribeData();
         console.log(res);
         commit('getSubscribe', res.data);
+    },
+    async getListenList({ commit }) {
+        const res = await getListenListData();
+        console.log(res);
+        commit('getListenList', res.data);
     }
 }
 export default actions;
