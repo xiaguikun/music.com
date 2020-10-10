@@ -7,3 +7,9 @@ import http from './http-x';
 export function getIndLikeData(params) {
     return http.get('/like', params);
 }
+
+//获得classify页的数据
+export function getClassifyData(params) {
+    return http.get('/classify', params);
+
+}

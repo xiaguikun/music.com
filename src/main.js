@@ -6,7 +6,7 @@ import store from './store'
 import "./assets/reset.less"
 import "amfe-flexible";
 
-import { Tabbar, TabbarItem, Search, Icon, NavBar, Swipe, SwipeItem, Lazyload, Collapse, CollapseItem } from 'vant';
+import { Tabbar, TabbarItem, Sidebar, SidebarItem, Search, Icon, NavBar, Swipe, SwipeItem, Lazyload, Collapse, CollapseItem } from 'vant';
 
 Vue.use(Tabbar);
 Vue.use(TabbarItem);
@@ -18,6 +18,8 @@ Vue.use(SwipeItem);
 Vue.use(Lazyload);
 Vue.use(Collapse);
 Vue.use(CollapseItem);
+Vue.use(Sidebar);
+Vue.use(SidebarItem);
 
 
 Vue.config.productionTip = false

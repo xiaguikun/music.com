@@ -1,6 +1,9 @@
 const state = {
     likeData: [],
-    indNavColor:':#76b6ee',
+    classifyData: [],
+    sideBarData: [],
+    indNavColor: ':#76b6ee',
+    type: '1'
 }
 
 export default state;
