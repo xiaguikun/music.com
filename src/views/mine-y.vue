@@ -2,7 +2,9 @@
     <div class="mine-y">
         <div  v-for="(item,index) in mineData" :key="index">
             <header v-if="index == 0">我的
+                <a href="/fffffff">
                 <img :src="item.url" alt="" v-if="index == 0" class="setting">
+                </a>
             </header> 
         </div>
         <div class="head">

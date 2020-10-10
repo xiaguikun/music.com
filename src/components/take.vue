@@ -69,8 +69,9 @@ export default {
                 width:100%;
                 display:flex;
                 flex-wrap:wrap;
+                justify-content: space-around;
                 section{
-                    width:30%;
+                    width:28%;
                     display: flex;
                     flex-direction:column;
                     align-items:center;
