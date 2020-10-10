@@ -7,6 +7,7 @@ import "./assets/reset.less";
 import "./assets/vannavbar.less";
 import "./assets/set-c/mine-c.less"
 import "amfe-flexible";
+import "./assets/style.less"
 
 import { Tabbar, TabbarItem, Search, Icon, NavBar, Swipe, SwipeItem, Lazyload, Collapse, CollapseItem,Cell, CellGroup,Switch,Button,Image as VanImage ,Sidebar,SidebarItem } from 'vant';
 

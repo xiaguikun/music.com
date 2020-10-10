@@ -23,9 +23,14 @@ export function getIndVipData(params) {
     return http.get('/vip', params);
 }
 //yzy
-//请求我的页中icon数据
+//请求mine-y页中icon数据
 export function getMineListData(params) {
     return http.get('/mine', params)
+
+}
+//请求shopYet-y页中数据
+export function getShopListData(params) {
+    return http.get('/yzy1', params)
 
 }
 

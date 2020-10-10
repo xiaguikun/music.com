@@ -1,0 +1,56 @@
+.shopYet-y .van-nav-bar {
+  background-color: #fd6b95;
+}
+.shopYet-y .van-nav-bar .van-icon {
+  color: #fff;
+}
+.shopYet-y .van-nav-bar .van-nav-bar__title {
+  color: #fff;
+}
+.shopYet-y .van-nav-bar .van-nav-bar__text {
+  color: #fff;
+}
+.shopYet-y .van-collapse .read-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.shopYet-y .van-collapse .read-wrapper .read-wrap {
+  width: 100px;
+  height: 150px;
+  text-align: center;
+}
+.shopYet-y .van-collapse .read-wrapper .read-wrap .read {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+.shopYet-y .van-collapse .read-wrapper .read-wrap span {
+  color: #4c4c4c;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.shopYet-y .van-collapse .song-wrapper .song-wrap {
+  height: 110px;
+  width: 375px;
+  position: relative;
+  left: -16px;
+  padding: 20px 16px;
+  border-top: 1px solid #ccc;
+}
+.shopYet-y .van-collapse .song-wrapper .song-wrap .song {
+  width: 70px;
+  height: 70px;
+  float: left;
+  margin-right: 17px;
+}
+.shopYet-y .van-collapse .song-wrapper .song-wrap p {
+  font-size: 14px;
+  font-weight: 700px;
+  letter-spacing: 1px;
+  color: #4c4c4c;
+}
+.shopYet-y .van-collapse .song-wrapper .song-wrap span {
+  line-height: 20px;
+}
