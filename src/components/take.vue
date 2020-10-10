@@ -63,14 +63,14 @@ export default {
                 display:flex;
                 flex-wrap:wrap;
                 section{
-                    width:100%;
+                    width:30%;
                     display: flex;
-                    // flex-direction:column;
+                    flex-direction:column;
                     align-items:center;
                     // flex-wrap:wrap;
                     flex-shrink:0;
                     img{
-                        width:30%;
+                        width:100%;
                     }
                 }
             }
