@@ -1,5 +1,8 @@
 const state = {
     likeData: [],
+    classifyData: [],
+    sideBarData: [],
+    type: '1',
     vipData: [],
     vipRecommend: [],
     vipProgram: [],
