@@ -129,6 +129,9 @@ const routes = [{
 },{
     path:'/yinzhi',
     component:()=>import('../views/yinzhi-c.vue')
+},{
+    path:'/gq4',
+    component:()=>import('../views/dingdan-g.vue')
 }
 ]
 
