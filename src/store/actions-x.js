@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-import { getIndLikeData, getClassifyData } from "../utils/api-x"
-
-=======
-import { getIndLikeData, getIndVipData, getsubscribeData, getFCommunityData, getListenListData, getMineListData } from "../utils/api-x"
->>>>>>> master
+import { getIndLikeData, getIndVipData, getsubscribeData, getFCommunityData, getListenListData, getMineListData, getClassifyData } from "../utils/api-x"
 const actions = {
     async getIndLike({ commit }) {
         const res = await getIndLikeData();
         commit('getIndLike', res.data);
     },
-<<<<<<< HEAD
 
     async getClassifyDa({ commit }, payload) {
         const res = await getClassifyData({
@@ -20,7 +14,7 @@ const actions = {
         commit('getClassifyDa', res.data.imgUrl);
 
         commit('getSideBarData', res);
-=======
+    },
     async getIndVip({ commit }) {
         const res = await getIndVipData()
         console.log(res);
@@ -45,7 +39,6 @@ const actions = {
         const res = await getListenListData();
         console.log(res);
         commit('getListenList', res.data);
->>>>>>> master
     }
 }
 export default actions;

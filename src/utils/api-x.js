@@ -8,12 +8,11 @@ export function getIndLikeData(params) {
     return http.get('/like', params);
 }
 
-<<<<<<< HEAD
 //获得classify页的数据
 export function getClassifyData(params) {
     return http.get('/classify', params);
+}
 
-=======
 
 export function getsubscribeData(params) {
     return http.get('/subscribe', params);
@@ -36,5 +35,4 @@ export function getFCommunityData(params) {
 
 export function getListenListData(params) {
     return http.get('/listenlist', params);
->>>>>>> master
 }
