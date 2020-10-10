@@ -101,6 +101,13 @@ const routes = [{
 },{
     path:'/c1',
     component:()=>import('../views/set-c.vue')
+},{
+    path:'/fkc1',
+    component:()=>import('../views/myvip-f.vue')
+},
+{
+    path:'/fkc2',
+    component:()=>import('../views/myshoucang-f.vue')
 }
 ]
 
