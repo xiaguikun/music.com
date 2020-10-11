@@ -22,13 +22,16 @@
                     </van-swipe-item>
                     
         </van-swipe>
-        <van-tree-select height="771px" :items="items" :main-active-index.sync="active" class="classify-wrap">
-        <template #content>
-            <div v-for="(item,index) in sideBarData" :key="index">
-                <!-- {{active}}
-                {{item.type}} -->
+        <van-tree-select height="771px"  :items="items" :main-active-index.sync="active" class="classify-wrap">
+        <template #content id="wrap-right">
+            <div v-for="(item,index) in sideBarData" :key="index" >
                  <div v-if="active == item.type">
                     <van-image :src="item.imgUrl"/>
+                    <p>{{item.text}}</p>
+                     <p>{{item.title}}</p>
+                      <p>{{item.num}}</p>
+                       <p>{{item.coll}}</p>
+                     <img :src="icon" alt="">
                 </div>
            
             </div>
@@ -38,7 +41,7 @@
             src="https://img.yzcdn.cn/vant/apple-2.jpg"
             /> -->
         </template>
-</van-tree-select>
+        </van-tree-select>
     </div>
 </template>
 <script>
@@ -47,6 +50,7 @@ import {mapState}  from 'vuex';
 export default {
     data(){
         return {
+            // icon:"",
             active: 0,
             items: [{ text: '热门' }, { text: 'VIP' }, { text: '儿童' }, { text: '音乐' }, { text: '英语' }, { text: '商业' }, { text: '娱乐' }, { text: '感情' }, { text: '历史' }, { text: '其他' }],
         }
@@ -55,7 +59,10 @@ export default {
         ...mapState([
             'classifyData',
             'sideBarData'
-        ])
+        ]),
+        icon(){
+            return this.sideBarData.icon
+        }
     },
     methods:{
         goback(){
@@ -75,91 +82,5 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.classify{
-    .classify-wrap {
-        position: absolute;
-        top: 300px;
-        left: 0px;
 
-    }
-   .van-swipe{
-       position: absolute;
-       top:90px;
-       left:50%;
-       transform:translate(-50%,0);
-       border-radius:30px;
-       width:84%;
-   }
-
-.im1{
-    width:100%;
-    height:200px;
-}
-    .search{
-        padding-bottom:150px;
-         background:#8097bc;
-         display:flex;
-         align-items:center;
-         height:60px;
-         justify-content: space-around;
-         .im{
-             display:flex;
-             align-items:center;
-            .i1{
-                width:20px;
-                height:20px;
-                margin-right:20px;
-            }
-            .i2{
-                width:20px;
-                height:20px;
-            }
-         }
-         .sear{
-        margin-top:10px;
-        display:flex;
-         align-items:center;
-         justify-content: flex-start;
-         width:200px;
-         height:30px;;
-         background:#c2cddf;
-         border-radius:16px;
-         .s{
-             width:14px;
-             height:14px;
-             margin-left:5px;
-         }
-         .in{
-        border:0;
-         background:#c2cddf;
-         margin-left:10px;
-         }
-
-
-         }
-
-    }
-    display:flex;
-    flex-direction: column;
-    width:100%;
-    .class{
-        padding-bottom:16px;
-        display:flex;
-        align-items:center;
-        height:50px;
-        background:#8097bc;
-        .back{
-             font-size:26px;
-             margin-left:30px;
-             color:white;
-        }
-        .c{
-            font-size:16px;
-            color:white;
-            margin-left:130px;
-        }
-
-    }
-
-}
 </style>

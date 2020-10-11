@@ -54,3 +54,87 @@
 .shopYet-y .van-collapse .song-wrapper .song-wrap span {
   line-height: 20px;
 }
+.classify {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.classify .classify-wrap {
+  position: relative;
+  top: 100px;
+  left: 0px;
+}
+.classify .classify-wrap .van-tree-select__content img {
+  width: 90px;
+  height: 90px;
+}
+.classify .van-swipe {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 30px;
+  width: 84%;
+}
+.classify .im1 {
+  width: 100%;
+  height: 200px;
+}
+.classify .search {
+  padding-bottom: 150px;
+  background: #8097bc;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  justify-content: space-around;
+}
+.classify .search .im {
+  display: flex;
+  align-items: center;
+}
+.classify .search .im .i1 {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+.classify .search .im .i2 {
+  width: 20px;
+  height: 20px;
+}
+.classify .search .sear {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 200px;
+  height: 30px;
+  background: #c2cddf;
+  border-radius: 16px;
+}
+.classify .search .sear .s {
+  width: 14px;
+  height: 14px;
+  margin-left: 5px;
+}
+.classify .search .sear .in {
+  border: 0;
+  background: #c2cddf;
+  margin-left: 10px;
+}
+.classify .class {
+  padding-bottom: 16px;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background: #8097bc;
+}
+.classify .class .back {
+  font-size: 26px;
+  margin-left: 30px;
+  color: white;
+}
+.classify .class .c {
+  font-size: 16px;
+  color: white;
+  margin-left: 130px;
+}
