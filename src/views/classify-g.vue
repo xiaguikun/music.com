@@ -25,13 +25,20 @@
         <van-tree-select height="771px"  :items="items" :main-active-index.sync="active" class="classify-wrap">
         <template #content id="wrap-right">
             <div v-for="(item,index) in sideBarData" :key="index" >
-                 <div v-if="active == item.type">
+                 <div v-if="active == item.type" class="wrap-right">
+                     <div class="numb">
+                        <img :src="item.icon" alt="" v-if="item.icon" class="image">
+                        <span>{{item.numb}}</span>
+                     </div>
+                   
                     <van-image :src="item.imgUrl"/>
-                    <p>{{item.text}}</p>
-                     <p>{{item.title}}</p>
-                      <p>{{item.num}}</p>
-                       <p>{{item.coll}}</p>
-                     <img :src="icon" alt="">
+                    <section>
+                        <p class="section-one">{{item.title}}</p>
+                        <p class="section-two">{{item.text}}</p>
+                        <p class="section-three"><span>{{item.num}}</span><span>{{item.coll}}</span></p>
+                        
+                    </section>
+                    
                 </div>
            
             </div>
@@ -50,7 +57,6 @@ import {mapState}  from 'vuex';
 export default {
     data(){
         return {
-            // icon:"",
             active: 0,
             items: [{ text: '热门' }, { text: 'VIP' }, { text: '儿童' }, { text: '音乐' }, { text: '英语' }, { text: '商业' }, { text: '娱乐' }, { text: '感情' }, { text: '历史' }, { text: '其他' }],
         }
@@ -59,10 +65,7 @@ export default {
         ...mapState([
             'classifyData',
             'sideBarData'
-        ]),
-        icon(){
-            return this.sideBarData.icon
-        }
+        ])
     },
     methods:{
         goback(){
