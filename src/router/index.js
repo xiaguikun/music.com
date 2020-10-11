@@ -85,7 +85,7 @@ const routes = [{
     component: () =>
         import ('../views/listenRanking-fkc.vue')
 }, {
-    path: '/gq1',
+    path: '/lishi',
     component: () =>
         import ('../views/history-g.vue')
 },{
@@ -93,42 +93,45 @@ const routes = [{
     component:()=>import('../views/classify-g.vue')
 },
 {
-    path:'/fkc',
+    path:'/tingdan',
     component:()=>import('../views/listenlist-f.vue')
 },{
-    path:'/yzy1',
+    path:'/yigou',
     component:()=>import('../views/shopYet-y.vue')
 },{
-    path:'/c1',
+    path:'/shezhi',
     component:()=>import('../views/set-c.vue')
 },{
-    path:'/fkc1',
+    path:'/myvip',
     component:()=>import('../views/myvip-f.vue')
 },
 {
-    path:'/fkc2',
+    path:'/shoucang',
     component:()=>import('../views/myshoucang-f.vue')
 },{
-    path:'/gq3',
+    path:'/shengyin',
     component:()=>import('../views/myshengyin-g.vue')
 },{
-    path:'/c2',
+    path:'/qianbao',
     component:()=>import('../views/qianbao-c.vue')
 },{
-    path:'/c3',
+    path:'/guanli',
     component:()=>import('../views/zhanghao-c.vue')
 },{
-    path:'/c4',
+    path:'/yinsi',
     component:()=>import('../views/yinsi-c.vue')
 },{
-    path:'/c5',
+    path:'/dongtai',
     component:()=>import('../views/dongtai-c.vue')
 },{
-    path:'/c6',
+    path:'/xiaoxi',
     component:()=>import('../views/xiaoxi-c.vue')
 },{
-    path:'/c7',
+    path:'/yinzhi',
     component:()=>import('../views/yinzhi-c.vue')
+},{
+    path:'/gq4',
+    component:()=>import('../views/dingdan-g.vue')
 }
 ]
 

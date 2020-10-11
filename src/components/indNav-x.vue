@@ -14,15 +14,16 @@ export default {
         return {
             navList:['推荐',' VIP ','儿童','相声','音乐','英语'],
             nowIndex:0,
-            routeUrl:['/index','/vip','','','',''],
-            bacColor:['#76b6ee','#ffce70','','','']
+            routeUrl:['/index','/vip','/index','/vip','/index','/vip'],
+            bacColor:['#76b6ee','#ffce70','#76b6ee','#ffce70','#76b6ee','#ffce70']
         }
     },
     methods:{
         changeIndex(index){
+            sessionStorage.setItem('NowIndex',index)
             this.nowIndex=index;
             this.$router.push(this.routeUrl[index]);
-            this.$store.commit('changeColor',this.bacColor[index])
+            this.$store.commit('changeColor',this.bacColor[this.nowIndex])
         },
     },
     computed:{
@@ -30,6 +31,10 @@ export default {
             return this.$store.state.indNavColor;
         }
 
+    },
+    mounted(){
+        this.nowIndex=sessionStorage.getItem('NowIndex')? sessionStorage.getItem('NowIndex'):0;
+        this.$store.commit('changeColor',this.bacColor[this.nowIndex])
     }
 }
 </script>

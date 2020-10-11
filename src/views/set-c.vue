@@ -6,12 +6,12 @@
         left-arrow
         right-text="退出应用"
         :placeholder ="true"
-        
+        @click-left="onClickLeft"        
     />
     <van-cell-group>
-      <van-cell title="账号管理" is-link />
-      <van-cell title="隐私设置" is-link />
-      <van-cell title="消息通知" is-link />
+      <van-cell title="账号管理" is-link @click.native="toOne"/>
+      <van-cell title="隐私设置" is-link @click.native="toTwo"/>
+      <van-cell title="消息通知" is-link @click.native="toThreen"/>
 
       <div class="heng"></div>
       <van-cell title="下载路径" is-link />
@@ -27,7 +27,7 @@
       </van-cell>
       <div class="heng"></div>
 
-      <van-cell title="音质设置" is-link />
+      <van-cell title="音质设置" is-link @click.native="toFour"/>
       <van-cell title="锁屏显示" />
       <van-cell center title="被其它软件暂停后继续播放">
         <template #right-icon>
@@ -52,10 +52,27 @@ export default {
   data() {
     return {
       checked: true,
-      checked1:true,
-      checked2:true,
-      checked3:true
+      checked1:false,
+      checked2:false,
+      checked3:false
     };
+  },
+  methods:{
+    onClickLeft(){
+      this.$router.go(-1);
+    },
+    toOne(){
+      this.$router.push('/guanli')
+    },
+    toTwo(){
+      this.$router.push('/yinsi')
+    },
+    toThreen(){
+      this.$router.push('/xiaoxi')
+    },
+    toFour(){
+      this.$router.push('/yinzhi')
+    }
   }
 };
 </script>

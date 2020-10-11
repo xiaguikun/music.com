@@ -4,10 +4,9 @@
             <van-collapse-item v-for="(item,index) in takeData" :key="index" :name="index+1" @click.native="handerClick(index+1)" >
                 <template #title>
                     <div class="icon-img">
-                        <img src="../images/icon/下拉备份 6@3x.png" alt="">
-                        <img src="../images/icon/下拉备份3@3x.png" alt="">
+                        <img src="../images/icon/下拉备份 6@3x.png" alt="" v-if="!(isIcon==index+1)">
+                        <img src="../images/icon/下拉备份3@3x.png" alt=""  v-if="isIcon==index+1">
                         {{item.id}} 
-                        <!-- <van-icon name="question-o" /> -->
                     </div>
                 </template>
                 <div class="sec">
@@ -27,12 +26,20 @@ export default {
     data(){
         return {
              activeNames: ['1'],
-             isIcon:1
+             isIcon:0,
+             flag:0
         }
     },
     methods:{
-        handerClick(){
-            this.isIcon=!this.isIcon;
+        handerClick(index){
+            console.log(this.isIcon);
+            if(this.flag==index){
+                this.isIcon=(parseInt(this.isIcon))*(-1);
+            }
+            if(this.flag!=index){
+                this.isIcon=index;                
+            }
+            this.flag=index;
         },
         getTakeData(){
             this.$store.dispatch('getSubscribe');
@@ -62,8 +69,9 @@ export default {
                 width:100%;
                 display:flex;
                 flex-wrap:wrap;
+                justify-content: space-around;
                 section{
-                    width:30%;
+                    width:28%;
                     display: flex;
                     flex-direction:column;
                     align-items:center;

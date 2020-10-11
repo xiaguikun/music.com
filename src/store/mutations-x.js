@@ -40,6 +40,9 @@ const mutations = {
     },
     getListenList(state, payload) {
         state.listenlistData = payload.list1;
+    },
+    MyVoiceList(state, payload) {
+        state.myVoiceList = payload.voiceData;
     }
 }
 
