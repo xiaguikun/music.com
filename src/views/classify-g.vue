@@ -38,7 +38,7 @@
                         <p class="section-three">
                             <img src="../images/icon/形状备份 17@3x.png" alt="" class="imi">
                             <span>{{item.num}}</span>
-                            
+                            <img src="../images/icon/形状备份 -2@3x.png" alt="" class="imi">
                             <span>{{item.coll}}</span>
                         </p>
                         
