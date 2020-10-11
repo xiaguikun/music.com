@@ -35,7 +35,12 @@
                     <section>
                         <p class="section-one">{{item.title}}</p>
                         <p class="section-two">{{item.text}}</p>
-                        <p class="section-three"><span>{{item.num}}</span><span>{{item.coll}}</span></p>
+                        <p class="section-three">
+                            <img src="../images/icon/形状备份 17@3x.png" alt="" class="imi">
+                            <span>{{item.num}}</span>
+                            
+                            <span>{{item.coll}}</span>
+                        </p>
                         
                     </section>
                     
