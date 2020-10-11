@@ -89,7 +89,7 @@ const routes = [{
     component: () =>
         import ('../views/history-g.vue')
 },{
-    path:'/gq2',
+    path:'/classify',
     component:()=>import('../views/classify-g.vue')
 },
 {

@@ -13,7 +13,7 @@
                     <span>社区</span>
                 </template>
             </van-tabbar-item>
-            <van-tabbar-item>
+            <van-tabbar-item to="/classify">
                 <template >   
                     <img src="../images/icon/播放@3x.png" alt="" style="width:30px;height:30px;margin-top:-15px;">
                 </template>
