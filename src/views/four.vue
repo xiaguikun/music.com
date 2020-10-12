@@ -1,22 +1,4 @@
 <template>
-<<<<<<< HEAD
-    <div>
-
-    </div>
-</template>
-<script>
-export default {
-    data(){
-        return {
-            
-        }
-    }
-}
-</script>
-<style lang="less" scoped>
-
-</style>
-=======
     <div class="denglu-four">
         <img src="../images/icon/叉@3x.png" alt="" class="div-left">
         <div class="div-right">验证码登录</div>
@@ -127,4 +109,3 @@ export default {
        
     }
 </style>
->>>>>>> master

@@ -10,18 +10,7 @@ import "amfe-flexible";
 import "./assets/style.less";
 import BaiduMap from 'vue-baidu-map';
 
-<<<<<<< HEAD
 import { Tabbar, TabbarItem, Search, Icon, NavBar, Swipe, SwipeItem, Lazyload, Collapse, CollapseItem, Cell, CellGroup, Switch, Button, Image as VanImage, Sidebar, SidebarItem, TreeSelect, Form, Uploader, Field, RadioGroup, Radio, Calendar, DatetimePicker, Area, Popup } from 'vant';
-=======
-
-import "./assets/one.less";
-
-
-
-
-
-import { Tabbar, TabbarItem, Search, Icon, NavBar, Swipe, SwipeItem, Lazyload, Collapse, CollapseItem, Cell, CellGroup, Switch, Button, Image as VanImage, Sidebar, SidebarItem, TreeSelect, Form, Field } from 'vant';
->>>>>>> master
 
 Vue.use(Tabbar);
 Vue.use(TabbarItem);
@@ -42,7 +31,6 @@ Vue.use(Sidebar);
 Vue.use(SidebarItem);
 Vue.use(TreeSelect);
 Vue.use(Form);
-<<<<<<< HEAD
 Vue.use(Uploader);
 Vue.use(Field);
 Vue.use(Radio);
@@ -51,14 +39,12 @@ Vue.use(Calendar);
 Vue.use(DatetimePicker);
 Vue.use(Area);
 Vue.use(Popup);
-=======
 Vue.use(Field);
 
 Vue.use(BaiduMap, {
     ak: 'prnThHq3IOti4KwEOF4UClQbGEez1wZS'
 })
 
->>>>>>> master
 
 
 Vue.config.productionTip = false
