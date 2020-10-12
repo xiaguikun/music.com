@@ -147,6 +147,7 @@ export default {
     watch: {
         async storyData() {
             await this.$nextTick();
+            await this.$nextTick();
             this.addBetterScroll();
         }
     }
