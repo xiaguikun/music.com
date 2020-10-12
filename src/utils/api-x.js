@@ -52,3 +52,8 @@ export function getMyVoiceData(params) {
 export function getditu(params){
     return http.get('/ditu',params);
 }
+
+
+export function getloginData(params){
+    return http.get('/login',params);
+}

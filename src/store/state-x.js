@@ -19,6 +19,7 @@ const state = {
     subscribeData: {},
     listenlistData: [],
     myMapData:[],
+    loginData:{},
 }
 
 export default state;

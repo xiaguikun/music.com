@@ -150,6 +150,9 @@ const routes = [{
 },{
     path:'/five',
     component:()=>import('../views/five.vue')
+},{
+    path:'/login',
+    component:()=>import('../views/login.vue')
 }
 ]
 
