@@ -9,7 +9,7 @@ import "./assets/set-c/mine-c.less"
 import "amfe-flexible";
 import "./assets/style.less"
 
-import { Tabbar, TabbarItem, Search, Icon, NavBar, Swipe, SwipeItem, Lazyload, Collapse, CollapseItem, Cell, CellGroup, Switch, Button, Image as VanImage, Sidebar, SidebarItem, TreeSelect } from 'vant';
+import { Tabbar, TabbarItem, Search, Icon, NavBar, Swipe, SwipeItem, Lazyload, Collapse, CollapseItem, Cell, CellGroup, Switch, Button, Image as VanImage, Sidebar, SidebarItem, TreeSelect, Form, Uploader, Field, RadioGroup, Radio, Calendar, DatetimePicker, Area, Popup } from 'vant';
 
 Vue.use(Tabbar);
 Vue.use(TabbarItem);
@@ -29,6 +29,15 @@ Vue.use(VanImage);
 Vue.use(Sidebar);
 Vue.use(SidebarItem);
 Vue.use(TreeSelect);
+Vue.use(Form);
+Vue.use(Uploader);
+Vue.use(Field);
+Vue.use(Radio);
+Vue.use(RadioGroup);
+Vue.use(Calendar);
+Vue.use(DatetimePicker);
+Vue.use(Area);
+Vue.use(Popup);
 
 
 Vue.config.productionTip = false
