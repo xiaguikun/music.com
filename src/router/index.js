@@ -132,6 +132,24 @@ const routes = [{
 },{
     path:'/gq4',
     component:()=>import('../views/dingdan-g.vue')
+},{
+    path:'/ditu',
+    component:()=>import('../views/ditu.vue')
+},{
+    path:'/one',
+    component:()=>import('../views/one.vue')
+},{
+    path:'/two',
+    component:()=>import('../views/two.vue')
+},{
+    path:'/three',
+    component:()=>import('../views/three.vue')
+},{
+    path:'/four',
+    component:()=>import('../views/four.vue')
+},{
+    path:'/five',
+    component:()=>import('../views/five.vue')
 }
 ]
 
