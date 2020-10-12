@@ -13,6 +13,10 @@ import BaiduMap from 'vue-baidu-map';
 
 import "./assets/one.less";
 
+
+
+
+
 import { Tabbar, TabbarItem, Search, Icon, NavBar, Swipe, SwipeItem, Lazyload, Collapse, CollapseItem, Cell, CellGroup, Switch, Button, Image as VanImage, Sidebar, SidebarItem, TreeSelect, Form, Field } from 'vant';
 
 Vue.use(Tabbar);
@@ -38,7 +42,8 @@ Vue.use(Field);
 
 Vue.use(BaiduMap, {
     ak: 'prnThHq3IOti4KwEOF4UClQbGEez1wZS'
-  })
+})
+
 
 
 Vue.config.productionTip = false
