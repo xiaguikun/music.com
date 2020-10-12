@@ -7,7 +7,10 @@ import "./assets/reset.less";
 import "./assets/vannavbar.less";
 import "./assets/set-c/mine-c.less"
 import "amfe-flexible";
-import "./assets/style.less"
+import "./assets/style.less";
+import BaiduMap from 'vue-baidu-map';
+
+
 
 import { Tabbar, TabbarItem, Search, Icon, NavBar, Swipe, SwipeItem, Lazyload, Collapse, CollapseItem, Cell, CellGroup, Switch, Button, Image as VanImage, Sidebar, SidebarItem, TreeSelect } from 'vant';
 
@@ -29,6 +32,10 @@ Vue.use(VanImage);
 Vue.use(Sidebar);
 Vue.use(SidebarItem);
 Vue.use(TreeSelect);
+
+Vue.use(BaiduMap, {
+    ak: 'prnThHq3IOti4KwEOF4UClQbGEez1wZS'
+  })
 
 
 Vue.config.productionTip = false
