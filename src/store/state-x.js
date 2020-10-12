@@ -18,6 +18,7 @@ const state = {
     communityDataFour: [],
     subscribeData: {},
     listenlistData: [],
+    myMapData:[],
 }
 
 export default state;

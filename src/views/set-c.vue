@@ -42,7 +42,7 @@
       <div class="heng"></div>
       <van-cell title="清除缓存" is-link />
       <van-cell title="检查更新" is-link />
-      <van-cell title="关于我们" is-link />
+      <van-cell title="关于我们" is-link @click.native="toFive"/>
     </van-cell-group> 
     <van-button round type="info" color="#fd6b95">退出登录</van-button>
   </div>
@@ -72,6 +72,9 @@ export default {
     },
     toFour(){
       this.$router.push('/yinzhi')
+    },
+    toFive(){
+      this.$router.push('/ditu')
     }
   }
 };

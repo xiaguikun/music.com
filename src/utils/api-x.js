@@ -46,3 +46,9 @@ export function getListenListData(params) {
 export function getMyVoiceData(params) {
     return http.get('/myvoice', params);
 }
+
+
+//请求地图数据
+export function getditu(params){
+    return http.get('/ditu',params);
+}

@@ -43,6 +43,9 @@ const mutations = {
     },
     MyVoiceList(state, payload) {
         state.myVoiceList = payload.voiceData;
+    },
+    getdituData(state,payload){
+        state.myMapData=payload.content;
     }
 }
 
