@@ -11,8 +11,9 @@ import "./assets/style.less";
 import BaiduMap from 'vue-baidu-map';
 
 
+import "./assets/one.less";
 
-import { Tabbar, TabbarItem, Search, Icon, NavBar, Swipe, SwipeItem, Lazyload, Collapse, CollapseItem, Cell, CellGroup, Switch, Button, Image as VanImage, Sidebar, SidebarItem, TreeSelect } from 'vant';
+import { Tabbar, TabbarItem, Search, Icon, NavBar, Swipe, SwipeItem, Lazyload, Collapse, CollapseItem, Cell, CellGroup, Switch, Button, Image as VanImage, Sidebar, SidebarItem, TreeSelect, Form, Field } from 'vant';
 
 Vue.use(Tabbar);
 Vue.use(TabbarItem);
@@ -32,6 +33,8 @@ Vue.use(VanImage);
 Vue.use(Sidebar);
 Vue.use(SidebarItem);
 Vue.use(TreeSelect);
+Vue.use(Form);
+Vue.use(Field);
 
 Vue.use(BaiduMap, {
     ak: 'prnThHq3IOti4KwEOF4UClQbGEez1wZS'
