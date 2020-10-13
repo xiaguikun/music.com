@@ -7,9 +7,9 @@
         @click-right="onClickRight"
         @click-left="onClickLeft"
         />
-        <div class="content">
-            <img v-if="done1 === 1" src="../images/icon/下拉备份3@3x.png" alt="" @click="change" class="img-001">
-            <img v-if="done1 === -1" src="../images/icon/下拉备份 6@3x.png" alt="" @click="change" class="img-002">
+        <div class="content"  @click="change">
+            <img v-if="done1 === 1" src="../images/icon/下拉备份3@3x.png" alt=""  class="img-001">
+            <img v-if="done1 === -1" src="../images/icon/下拉备份 6@3x.png" alt=""  class="img-002">
             <span>最喜欢</span>
             <span>4</span>
         </div>
@@ -20,9 +20,9 @@
                 <p>{{ item.content }}</p>
             </div>
         </div>
-        <div class="content">
-            <img v-if="done2 === 1" src="../images/icon/下拉备份3@3x.png" alt="" @click="change1" class="img-001">
-            <img v-if="done2 === -1" src="../images/icon/下拉备份 6@3x.png" alt="" @click="change1" class="img-002">
+        <div class="content" @click="change1">
+            <img v-if="done2 === 1" src="../images/icon/下拉备份3@3x.png" alt=""  class="img-001">
+            <img v-if="done2 === -1" src="../images/icon/下拉备份 6@3x.png" alt=""  class="img-002">
             <span>知识</span>
             <span>9</span>
         </div>
@@ -33,9 +33,9 @@
                 <p>{{ item.content }}</p>
             </div>
         </div>
-        <div class="content">
-            <img v-if="done4 === 1" src="../images/icon/下拉备份3@3x.png" alt="" @click="change2"  class="img-001">
-            <img v-if="done4 === -1" src="../images/icon/下拉备份 6@3x.png" alt="" @click="change2"  class="img-002">
+        <div class="content" @click="change2">
+            <img v-if="done4 === 1" src="../images/icon/下拉备份3@3x.png" alt=""   class="img-001">
+            <img v-if="done4 === -1" src="../images/icon/下拉备份 6@3x.png" alt=""   class="img-002">
             <span>工作技巧</span>
             <span>20</span>
         </div>
@@ -46,9 +46,9 @@
                 <p>{{ item.content }}</p>
             </div>
         </div>
-        <div class="content">
-            <img v-if="done6 === 1" src="../images/icon/下拉备份3@3x.png" alt="" @click="change3"  class="img-001">
-            <img v-if="done6 === -1" src="../images/icon/下拉备份 6@3x.png" alt="" @click="change3"  class="img-002">
+        <div class="content" @click="change3">
+            <img v-if="done6 === 1" src="../images/icon/下拉备份3@3x.png" alt=""   class="img-001">
+            <img v-if="done6 === -1" src="../images/icon/下拉备份 6@3x.png" alt=""   class="img-002">
             <span>明星</span>
             <span>12</span>
         </div>
