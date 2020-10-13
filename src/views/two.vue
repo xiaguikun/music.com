@@ -1,6 +1,6 @@
 <template>
     <div class="denglu-two">
-        <img src="../images/icon/叉@3x.png" alt="" class="div-left">
+        <img src="../images/icon/叉@3x.png" alt="" class="div-left" @click="toBack">
         <div class="div-right">验证码登录</div>
         <img src="../images/icon/11.png" alt="" class="img-center">
 
@@ -23,10 +23,10 @@
                 placeholder="输入验证码"
                 :rules="[{ required: true, message: '请填写密码' }]"
             />
-            <button class="button">发送验证</button>
+            <button class="button" @click="toVer">发送验证</button>
             </div>
             <div style="margin: 16px;">
-                <van-button round block type="info" native-type="submit">
+                <van-button round block type="info" native-type="submit" @click.native="subLogin">
                 登录
                 </van-button>
             </div>
@@ -55,6 +55,9 @@
 </template>
 
 <script>
+import { Toast } from 'vant';
+import axios from 'axios'
+import qs from 'qs';
 export default {
    data() {
     return {
@@ -66,6 +69,33 @@ export default {
     onSubmit(values) {
       console.log('submit', values);
     },
+    toBack(){
+        sessionStorage.setItem('Init',true);
+        Toast('未登录，即将返回首页');
+        this.$router.push('/');
+    },
+    toVer(){
+        const instance = axios.create({
+            baseURL: 'http://www.pudge.wang:3001',
+            timeout: 10000
+        });
+        return new Promise((resolve, reject) => {
+            instance.post('/register/getCode', qs.stringify({phone: this.username,templateId: '537707'}))
+            .then((response) => {
+                resolve(response);
+            })
+            .catch((error) => {
+                Toast(error.message)
+                reject(error);
+            });
+        });
+    },
+    subLogin(){
+        if(this.password){
+            sessionStorage.setItem('token','true')
+            this.$router.push('/mine');
+        }
+    }
   },
 };
 </script>

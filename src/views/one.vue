@@ -96,7 +96,7 @@ export default {
         }
     },
     yanzhengNum(){
-        
+        this.$router.push('/two');
     }
   },
 };
