@@ -60,7 +60,7 @@
             />
             </van-popup>
             <div style="margin: 16px;">
-                <van-button round block type="info" native-type="submit" class="button1">
+                <van-button round block type="info" native-type="submit" class="button1" >
                立即进入
                 </van-button>
             </div>
@@ -68,7 +68,7 @@
     </div>
 </template>
 <script>
-import { Dialog} from 'vant';
+import { Dialog,Toast} from 'vant';
 export default {
     data(){
         return {
@@ -126,7 +126,8 @@ export default {
   },
     methods:{
         onClickRight() {
-            alert('坤，这里写一个下级路由')
+            Toast('已跳过');
+            this.$router.push('/mine')
         },
         onClickLeft() {
             Dialog.confirm({
@@ -145,7 +146,13 @@ export default {
         },
          onSubmit(values) {
             console.log('submit', values);
-            alert('这里有一个提交事件，坤改一下')
+            this.$store.commit('starPerson',{
+                imgUrl:'https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1456714890,4196371983&fm=26&gp=0.jpg',
+                title:this.username
+            });
+            Toast('修改成功');
+            this.$router.push({path:'/mine'});
+
         },
         onConfirm(date) {
             this.value = `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`;
