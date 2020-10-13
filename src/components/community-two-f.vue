@@ -75,6 +75,7 @@ export default {
             img{
                 width: 25%;
                 height: 70px;
+                border-radius: 50%;
             }
             div{
                 width: 70%;
@@ -98,15 +99,15 @@ export default {
         .content-bottom-left{
             font-size: 20px;
             img{
-                width: 70px;
-                height: 70px;
+                width: 100px;
+                height: 100px;
             }
             .zhezhao{
                 position: relative;
-                top: -70px;
+                top: -100px;
                 left: 0;
-                width: 70px;
-                height: 70px;
+                width: 100px;
+                height: 100px;
                 background-color: rgba(80, 80, 80, .7);
                 z-index: 0;
                 display: flex;
@@ -122,12 +123,17 @@ export default {
             // font-size: 16px;
             p:first-child{
                 font-size: 18px;
-                margin-top: 10px;
+                margin-top: 20px;
                 margin-bottom: 10px;
                 padding-left: 5px;
                 color: #333;
+                width: 150px;
+                white-space:nowrap;
+                overflow:hidden;
+                text-overflow:ellipsis;
             }
             p:last-child{
+                margin-top: 5px;
                 font-size: 16px;
                 padding-left: 5px;
                 color: #868686;

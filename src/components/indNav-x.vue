@@ -1,11 +1,11 @@
 <template>
-        <ul class="nav" :style="'background-color:'+indNavColor">
+        <nav class="nav" :style="'background-color:'+indNavColor">
             <li v-for="(item,index) in navList" :key="index" @click="changeIndex(index)">
                 <article>{{item}}</article>
                 <p v-if="index==nowIndex"></p>
             </li>
             <li><img src="../images/icon/编组 9@3x.png" alt=""></li>
-        </ul>
+        </nav>
 </template>
 
 <script>

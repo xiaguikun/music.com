@@ -197,3 +197,68 @@
 .classify .class .van-icon-arrow-left::before {
   color: white;
 }
+.five nav {
+  height: 45px;
+  background-color: #fd6b95;
+}
+.five .van-nav-bar .van-icon {
+  color: black;
+}
+.five .van-nav-bar .van-nav-bar__text {
+  color: black;
+}
+.five .quan {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+}
+.five .quan .van-uploader {
+  width: 101px;
+  height: 101px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.five .quan .van-uploader .van-uploader__wrapper {
+  height: 99px;
+  width: 99px;
+  border-radius: 50%;
+}
+.five .quan .van-uploader .van-uploader__wrapper .van-uploader__upload {
+  background-color: #fff;
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  border-radius: 50%;
+  border: 2px solid #999;
+}
+.five .quan .van-uploader .van-uploader__upload-icon {
+  display: none;
+}
+.five .quan .van-uploader__preview-image {
+  width: 100px;
+  height: 100px;
+}
+.five .quan .img2 {
+  position: absolute;
+  z-index: 1;
+  width: 30px;
+  height: 25px;
+  left: 75px;
+  top: 70px;
+}
+.five form {
+  padding: 0 40px;
+  height: 400px;
+}
+.five form .van-field__control {
+  font-size: 14px;
+}
+.five form .van-cell {
+  border-bottom: 1px solid #ccc;
+}
+.five form .button1 {
+  background-color: #fd6b95;
+  border: none;
+}

@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import { Toast } from 'vant';
 
 Vue.use(VueRouter)
 
@@ -78,7 +79,15 @@ const routes = [{
     }, {
         path: '/mine',
         component: () =>
-            import ('../views/mine-y.vue')
+            import ('../views/mine-y.vue'),
+        beforeEnter(to,from ,next){
+            if(sessionStorage.getItem('token')=='true'){
+                next();
+            }else{
+                Toast('权限不够，请先登录');
+                next('/one')
+            }
+        }
     }]
 }, {
     path: '/toRank',
@@ -150,6 +159,9 @@ const routes = [{
 },{
     path:'/five',
     component:()=>import('../views/five.vue')
+},{
+    path:'/login',
+    component:()=>import('../views/login.vue')
 }
 ]
 

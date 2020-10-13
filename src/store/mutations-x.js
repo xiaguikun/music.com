@@ -46,6 +46,10 @@ const mutations = {
     },
     getdituData(state,payload){
         state.myMapData=payload.content;
+    },
+    starPerson(state,payload){
+        state.starPerson=payload;
+        console.log(1111111111);
     }
 }
 

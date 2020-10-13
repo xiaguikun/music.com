@@ -54,7 +54,12 @@ const actions = {
         const res=await getditu();
         console.log(res);
         commit('getdituData',res.data)
-    }
+    },
+    // async loginData({commit},payload){
+    //     const res=await getloginData(payload);
+    //     console.log(res);
+    //     commit('loginData',res)
+    // }
 
 }
 export default actions;
