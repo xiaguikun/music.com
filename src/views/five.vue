@@ -60,7 +60,7 @@
             />
             </van-popup>
             <div style="margin: 16px;">
-                <van-button round block type="info" native-type="submit" class="button1">
+                <van-button round block type="info" native-type="submit" class="button1" >
                立即进入
                 </van-button>
             </div>
@@ -146,6 +146,10 @@ export default {
         },
          onSubmit(values) {
             console.log('submit', values);
+            this.$store.commit('starPerson',{
+                imgUrl:'https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1456714890,4196371983&fm=26&gp=0.jpg',
+                title:this.username
+            });
             Toast('修改成功');
             this.$router.push({path:'/mine'});
 
