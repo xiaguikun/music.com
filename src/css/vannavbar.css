@@ -1,22 +1,26 @@
 .ind-vip-fkc .van-nav-bar__text,
 .listenRanking-fkc .van-nav-bar__text,
-.myvip-f .van-nav-bar__text {
+.myvip-f .van-nav-bar__text,
+.listenlist .van-nav-bar__text {
   color: #fff;
   font-size: 14px;
 }
 .ind-vip-fkc .van-nav-bar__title,
 .listenRanking-fkc .van-nav-bar__title,
-.myvip-f .van-nav-bar__title {
+.myvip-f .van-nav-bar__title,
+.listenlist .van-nav-bar__title {
   color: #fff;
   font-size: 18px;
 }
 .ind-vip-fkc .van-icon-arrow-left::before,
 .listenRanking-fkc .van-icon-arrow-left::before,
-.myvip-f .van-icon-arrow-left::before {
+.myvip-f .van-icon-arrow-left::before,
+.listenlist .van-icon-arrow-left::before {
   color: white;
 }
 .ind-vip-fkc .van-hairline--bottom::after,
 .listenRanking-fkc .van-hairline--bottom::after,
-.myvip-f .van-hairline--bottom::after {
+.myvip-f .van-hairline--bottom::after,
+.listenlist .van-hairline--bottom::after {
   border-bottom-width: 0;
 }
