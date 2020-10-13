@@ -44,10 +44,11 @@
       <van-cell title="检查更新" is-link />
       <van-cell title="关于我们" is-link @click.native="toFive"/>
     </van-cell-group> 
-    <van-button round type="info" color="#fd6b95">退出登录</van-button>
+    <van-button round type="info" color="#fd6b95" @click.native="outLogin">退出登录</van-button>
   </div>
 </template>
 <script>
+import { Toast } from 'vant';
 export default {
   data() {
     return {
@@ -75,6 +76,12 @@ export default {
     },
     toFive(){
       this.$router.push('/ditu')
+    },
+    outLogin(){
+      Toast('退出成功,即将进入首页')
+      sessionStorage.setItem('token',"false");
+      this.$router.push('/');
+      sessionStorage.setItem('Init',true)
     }
   }
 };

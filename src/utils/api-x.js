@@ -54,6 +54,6 @@ export function getditu(params){
 }
 
 
-export function getloginData(params){
-    return http.get('/login',params);
-}
+// export function getloginData(params){
+//     return http.post('/login1',params);
+// }

@@ -47,15 +47,12 @@ const mutations = {
     getdituData(state,payload){
         state.myMapData=payload.content;
     },
-    loginData(state,payload){
-        state.loginData=payload;
-    },
-    login(state,payload) {
-        state.login = payload.data.userInfo
-        if(payload.data.userInfo) {
-          sessionStorage.setItem('username',JSON.stringify(payload.data.userInfo));
-        }
-      },
+    // loginData(state,payload){
+    //     state.loginData= payload.data.userInfo;
+    //     if(payload.data.userInfo) {
+    //         sessionStorage.setItem('username',JSON.stringify(payload.data.userInfo));
+    //       }
+    // }
 }
 
 export default mutations;

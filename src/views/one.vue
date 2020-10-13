@@ -1,6 +1,6 @@
 <template>
     <div class="denglu-one">
-        <img src="../images/icon/叉@3x.png" alt="" class="div-left">
+        <img src="../images/icon/叉@3x.png" alt="" class="div-left" @click="toBack">
         <div class="div-right">验证码登录</div>
         <img src="../images/icon/11.png" alt="" class="img-center">
 
@@ -10,7 +10,7 @@
                 v-model="username"
                 name="用户名"
                 label=""
-                placeholder="输入手机号/邮箱"
+                placeholder="用户名/邮箱"
                 :rules="[{ required: true, message: '请填写用户名' }]"
             />
             </div>
@@ -26,7 +26,7 @@
             <button class="button">显示密码</button>
             </div>
             <div style="margin: 16px;">
-                <van-button round block type="info" native-type="submit">
+                <van-button round block type="info" native-type="submit" @click.native="subData">
                 登录
                 </van-button>
             </div>
@@ -55,6 +55,7 @@
 </template>
 
 <script>
+import { Toast } from 'vant';
 export default {
    data() {
     return {
@@ -66,6 +67,32 @@ export default {
     onSubmit(values) {
       console.log('submit', values);
     },
+    toBack(){
+        this.$router.go(-1);
+    },
+    subData(){
+        if(this.username=='admin'&&this.password=='123456'){
+            sessionStorage.setItem('token','true')
+            this.$router.push('/mine');
+        }else if(this.username=='xgk'&&this.password=='123456'){
+            sessionStorage.setItem('token','true')
+            this.$router.push('/mine');
+        }else if(this.username=='fkc'&&this.password=='123456'){
+            sessionStorage.setItem('token','true')
+            this.$router.push('/mine');
+        }else if(this.username=='yzy'&&this.password=='123456'){
+            sessionStorage.setItem('token','true')
+            this.$router.push('/mine');
+        }else if(this.username=='gq'&&this.password=='123456'){
+            sessionStorage.setItem('token','true')
+            this.$router.push('/mine');
+        }else if(this.username=='cpj'&&this.password=='123456'){
+            sessionStorage.setItem('token','true')
+            this.$router.push('/mine');
+        }else{
+            Toast('用户名或者密码错误')
+        }
+    }
   },
 };
 </script>

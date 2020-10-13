@@ -44,6 +44,10 @@ export default {
     },
     mounted(){
         this.active=sessionStorage.getItem('active') ? parseInt(sessionStorage.getItem('active')) : 0;
+        if(sessionStorage.getItem('Init')=='true'){
+            this.active=0;
+            sessionStorage.setItem('Init',false);
+        }
     },
      data() {
         return {
