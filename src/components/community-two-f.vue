@@ -67,6 +67,7 @@ export default {
         padding: 20px;
         background-color: #fff;
         padding-bottom: 50px;
+        margin-bottom: 50px;
         .content-top{
             width: 100%;
             height: 70px;
@@ -91,7 +92,7 @@ export default {
     }
     .content-bottom{
         width: 95%;
-        height: 120px;
+        height: 130px;
         padding: 20px;
         margin-left: 7px;
         background-color: #f2f2f2;
@@ -99,20 +100,22 @@ export default {
         .content-bottom-left{
             font-size: 20px;
             img{
-                width: 100px;
-                height: 100px;
+                width: 90px;
+                height: 90px;
+                border-radius: 10px;
             }
             .zhezhao{
                 position: relative;
-                top: -100px;
+                top: -90px;
                 left: 0;
-                width: 100px;
-                height: 100px;
-                background-color: rgba(80, 80, 80, .7);
+                width: 90px;
+                height: 90px;
+                background-color: rgba(80, 80, 80, .4);
                 z-index: 0;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                border-radius: 10px;
                 img{
                     width: 40%;
                     height: 40%;

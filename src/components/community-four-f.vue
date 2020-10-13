@@ -8,7 +8,7 @@
             <p>
                <span>{{ item.Id }}</span>
             </p>
-            <p>{{ item.title }}</p>
+            <p>{{ item.content }}</p>
             <p>
                <span>{{ item.time }}</span>
             </p>
@@ -53,8 +53,8 @@ export default {
       display: flex;
       .list-left{
          img{
-         width: 80px;
-         height: 80px;
+         width: 60px;
+         height: 60px;
          border-radius: 50%;
       }
       }
@@ -66,26 +66,28 @@ export default {
             height: 30px;
             span:first-child{
                float: left;
-               font-size: 22px;
+               font-size: 18px;
                font-weight: 500;
-               padding-left: 30px;
+               padding-left: 20px;
+               padding-top: 5px;
             }
          }
          p:nth-child(2){
-            font-size: 15px;
+            font-size: 14px;
             width: 100%;
             height: 50px;
             color: #bfbfbf;
-            padding-left: 30px;
-            padding-top: 30px;
+            padding-left: 20px;
+            padding-top: 15px;
          }
          p:last-child{
             width: 100%;
-            height: 30px;
+            height: 15px;
             span:first-child{
                float: right;
-               font-size: 15px;
+               font-size: 14px;
                padding-right: 10px;
+               margin-top: -10px;
                color: #bfbfbf;
             }
          }
@@ -93,8 +95,8 @@ export default {
       .list-right{
          width: 20%;
         img{
-           width: 80px;
-           height: 80px;
+           width: 60px;
+           height: 60px;
            border-radius: 8px;
         }
       }
