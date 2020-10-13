@@ -1,7 +1,7 @@
 <template>
     <div class="denglu-one">
         <img src="../images/icon/叉@3x.png" alt="" class="div-left" @click="toBack">
-        <div class="div-right">验证码登录</div>
+        <div class="div-right" @click="yanzhengNum">验证码登录</div>
         <img src="../images/icon/11.png" alt="" class="img-center">
 
         <van-form @submit="onSubmit" class="v-form">
@@ -68,7 +68,9 @@ export default {
       console.log('submit', values);
     },
     toBack(){
-        this.$router.go(-1);
+        sessionStorage.setItem('Init',true);
+        Toast('未登录，即将返回首页');
+        this.$router.push('/');
     },
     subData(){
         if(this.username=='admin'&&this.password=='123456'){
@@ -92,6 +94,9 @@ export default {
         }else{
             Toast('用户名或者密码错误')
         }
+    },
+    yanzhengNum(){
+        this.$router.push('/two');
     }
   },
 };
