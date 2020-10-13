@@ -18,8 +18,13 @@
                <p class="time">{{item.outtime}}</p>
            </div>
            <div class="right">
-               <img src="../images/icon/形状备份 -2@3x.png" alt="">
-               <div class="readtime">{{item.readtime}}</div>
+               <div class="del" v-if="hide"  @click="del(index)">
+                   <span>删除</span>
+               </div>
+               <div class="tup">
+                   <img src="../images/icon/形状备份 -2@3x.png" alt="">
+                   <div class="readtime">{{item.readtime}}</div>
+               </div>
            </div>
        </div>
        
@@ -28,6 +33,12 @@
 <script>
 import {mapState,mapActions}  from 'vuex'
 export default {
+    data(){
+        return {
+            hide:false,
+            change:false
+        }
+    },
     computed:{
         ...mapState([
             'myVoiceList'
@@ -41,7 +52,17 @@ export default {
             this.$router.go(-1)
     },
     onClickRight() {
+      this.hide=true;
+      if(this.change){
+          this.hide=false;
+          this.change=false;
+      }
+
     },
+    del(index){
+         this.myVoiceList.splice(index,1);
+         this.change=true;
+    }
 
     },
     mounted(){
@@ -67,11 +88,28 @@ export default {
     display:flex;
     .right{
         display:flex;
-        margin-right:1%;
         height:100%;
-        align-items:flex-end;
-        margin-bottom:16%;
-        img{
+        // align-items:flex-end;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items:center;
+        .del{
+            font-size:16px;
+            color:white;
+            width:40px;
+            height:40px;
+            background:red;
+            text-align:center;
+            line-height:40px;
+            border-radius:8px;
+
+        }
+        .tup{
+            display:flex;
+            margin-bottom:20px;
+            margin-top:30px;
+
+            img{
             width:14px;
             height:14px;
         }
@@ -79,6 +117,7 @@ export default {
             font-size:14px;
             color:#868686;
             margin-left:10px;
+        }
         }
     }
     .title{
