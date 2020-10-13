@@ -73,24 +73,55 @@ export default {
         this.$router.push('/');
     },
     subData(){
+        let obj
         if(this.username=='admin'&&this.password=='123456'){
             sessionStorage.setItem('token','true')
             this.$router.push('/mine');
+             obj={
+                imgUrl:'https://dss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=4176367503,3353903800&fm=58&app=83&f=JPEG?w=250&h=250&s=2BA2E50740E3AAA431201DE30300E061',
+                title:'刘德华'
+            };
+            this.$store.commit('starPerson',obj);
         }else if(this.username=='xgk'&&this.password=='123456'){
             sessionStorage.setItem('token','true')
             this.$router.push('/mine');
+            obj={
+                imgUrl:'https://dss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3827930600,2459007501&fm=58&app=83&f=JPEG?w=250&h=250&s=5BD4AB448E337694C10C4D920300509B',
+                title:'胡歌'
+            };
+            this.$store.commit('starPerson',obj);
         }else if(this.username=='fkc'&&this.password=='123456'){
             sessionStorage.setItem('token','true')
             this.$router.push('/mine');
+            obj={
+                imgUrl:'https://dss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=1988428529,1719851563&fm=58&app=83&f=JPEG?w=250&h=250&s=FBA11B6060A17EBCFE2859860100E0E3',
+                title:'吴亦凡'
+            };
+            this.$store.commit('starPerson',obj);
         }else if(this.username=='yzy'&&this.password=='123456'){
             sessionStorage.setItem('token','true')
             this.$router.push('/mine');
+            obj={
+                imgUrl:'https://dss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=3438437392,1752928559&fm=58&app=83&f=JPEG?w=250&h=250&s=0830CD122D33F2942CC054FF03001060',
+                title:'霍建华'
+            };
+            this.$store.commit('starPerson',obj);
         }else if(this.username=='gq'&&this.password=='123456'){
             sessionStorage.setItem('token','true')
             this.$router.push('/mine');
+            obj={
+                imgUrl:'https://dss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2640321980,302884856&fm=58&app=83&f=JPEG?w=250&h=250&s=09413B6EC05A05D44140209A0300C093',
+                title:'邓伦'
+            };
+            this.$store.commit('starPerson',obj);
         }else if(this.username=='cpj'&&this.password=='123456'){
             sessionStorage.setItem('token','true')
             this.$router.push('/mine');
+            obj={
+                imgUrl:'https://dss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=4233935594,2898253275&fm=58&app=83&f=JPEG?w=250&h=250&s=0642F90248B0D1ADC33885F1030080B0',
+                title:'李肖逸'
+            };
+            this.$store.commit('starPerson',obj);
         }else{
             Toast('用户名或者密码错误')
         }

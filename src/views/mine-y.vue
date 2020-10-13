@@ -8,8 +8,8 @@
         <div class="head">
             <img src="http://pic.90sjimg.com/back_pic/u/00/24/84/32/561dc90ed93f6.jpg" alt="" class="head-bk">
             <div class="head-wrap">
-                <img src="../images/images/touxiang.jpg" alt="" class="head-avatar">
-                <h6>原来是雅典娜啊!</h6>
+                <img :src="star.imgUrl" alt="" class="head-avatar">
+                <h6>原来是 {{star.title}}</h6>
                 <p>关注 38 | 粉丝 37</p>
             </div>
             <div class="head-play">
@@ -95,6 +95,9 @@ export default {
      computed:{
           mineData(){
             return this.$store.state.mineData.img;
+        },
+        star(){
+            return this.$store.state.starPerson;
         }
      }
 }
