@@ -17,11 +17,10 @@
             <div class="im">
                  <img src="../images/icon/历史时间-6@3x.png" alt="" class="i1">
                 <img src="../images/icon/plus-circle@3x.png" alt="" class="i2">
-               
             </div>
         </div>
         <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
-                    <van-swipe-item v-for="(item,index) in classifyData" :key="index" >
+                    <van-swipe-item v-for="(item,index) in classifyData" :key="index"  @click="toList(index)">
                         <img :src="item.url" alt="" class="im1">
                     </van-swipe-item>
                     
@@ -81,6 +80,9 @@ export default {
         onClickLeft(){
             this.$router.go(-1);
         },
+        toList(){
+           
+        }
        
       
     },
