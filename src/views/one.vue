@@ -73,9 +73,10 @@ export default {
         this.$router.push('/');
     },
     subData(){
-        let obj
+        let obj;
         if(this.username=='admin'&&this.password=='123456'){
-            sessionStorage.setItem('token','true')
+            sessionStorage.setItem('token','true');
+            
             this.$router.push('/mine');
              obj={
                 imgUrl:'https://dss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=4176367503,3353903800&fm=58&app=83&f=JPEG?w=250&h=250&s=2BA2E50740E3AAA431201DE30300E061',

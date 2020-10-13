@@ -76,7 +76,7 @@ export default {
                 this.$router.push('/shengyin');
             }
             if(index==4){
-                // this.$router.push('/');
+                this.$router.push('/five');
             }
             if(index==5){
                 // this.$router.push('/');

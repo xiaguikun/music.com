@@ -68,7 +68,7 @@
     </div>
 </template>
 <script>
-import { Dialog} from 'vant';
+import { Dialog,Toast} from 'vant';
 export default {
     data(){
         return {
@@ -126,7 +126,8 @@ export default {
   },
     methods:{
         onClickRight() {
-            alert('坤，这里写一个下级路由')
+            Toast('已跳过');
+            this.$router.push('/mine')
         },
         onClickLeft() {
             Dialog.confirm({
@@ -145,7 +146,9 @@ export default {
         },
          onSubmit(values) {
             console.log('submit', values);
-            alert('这里有一个提交事件，坤改一下')
+            Toast('修改成功');
+            this.$router.push({path:'/mine'});
+
         },
         onConfirm(date) {
             this.value = `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`;
