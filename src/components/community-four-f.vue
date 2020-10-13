@@ -8,7 +8,7 @@
             <p>
                <span>{{ item.Id }}</span>
             </p>
-            <p>{{ item.title }}</p>
+            <p>{{ item.content }}</p>
             <p>
                <span>{{ item.time }}</span>
             </p>
