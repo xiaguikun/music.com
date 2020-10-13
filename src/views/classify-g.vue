@@ -1,10 +1,14 @@
 <template>
     <div class="classify">
-        <div class="class">
-            <div class="back" @click="goback">&lt;</div>
-            <span class="c">分类</span>
-        </div>
-
+       <van-nav-bar
+       :border="false"
+       class="class"
+            title="分类"
+            left-arrow
+            @click-left="onClickLeft"
+>
+</van-nav-bar>
+<div class="zh"></div>
         <div class="search">
             <div class="sear">
                 <img src="../images/icon/搜索@3x.png" alt="" class="s">
@@ -25,6 +29,7 @@
         <van-tree-select height="771px"  :items="items" :main-active-index.sync="active" class="classify-wrap">
         <template #content id="wrap-right">
             <div v-for="(item,index) in sideBarData" :key="index" >
+                <!--  -->
                  <div v-if="active == item.type" class="wrap-right">
                      <div class="numb">
                         <img :src="item.icon" alt="" v-if="item.icon" class="image">
@@ -73,7 +78,7 @@ export default {
         ])
     },
     methods:{
-        goback(){
+        onClickLeft(){
             this.$router.go(-1);
         },
        

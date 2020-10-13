@@ -74,7 +74,9 @@
         // .van-sidebar {
         //     width: 65px;
         // }
-       
+        .van-tree-select__nav{
+            flex:none;
+        }
         .van-tree-select__content{
             .wrap-right {
                 border-bottom: 2px solid #ccc;
@@ -147,7 +149,7 @@
     }
    .van-swipe{
        position: absolute;
-       top:90px;
+       top:120px;
        left:50%;
        transform:translate(-50%,0);
        border-radius:30px;
@@ -159,6 +161,7 @@
     height:200px;
 }
     .search{
+        padding-top:30px;
         padding-bottom:150px;
          background:#8097bc;
          display:flex;
@@ -206,22 +209,24 @@
     flex-direction: column;
     width:100%;
     .class{
-        padding-bottom:16px;
-        display:flex;
-        align-items:center;
-        height:50px;
+        // padding-bottom:16px;
+        // display:flex;
+        // align-items:center;
+        // height:50px;
         background:#8097bc;
-        .back{
-             font-size:26px;
-             margin-left:30px;
-             color:white;
+        .van-nav-bar__text{
+            color: #fff ;
+            font-size: 14px;
+           }
+        .van-nav-bar__title{
+            color: #fff;
+            font-size: 18px;
         }
-        .c{
-            font-size:16px;
-            color:white;
-            margin-left:130px;
+        .van-icon-arrow-left::before{
+            color: white;
         }
-
+       
+        
     }
 
 }
