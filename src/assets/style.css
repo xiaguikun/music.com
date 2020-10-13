@@ -64,6 +64,9 @@
   top: 100px;
   left: 0px;
 }
+.classify .classify-wrap .van-tree-select__nav {
+  flex: none;
+}
 .classify .classify-wrap .van-tree-select__content .wrap-right {
   border-bottom: 2px solid #ccc;
   position: relative;
@@ -128,7 +131,7 @@
 }
 .classify .van-swipe {
   position: absolute;
-  top: 90px;
+  top: 120px;
   left: 50%;
   transform: translate(-50%, 0);
   border-radius: 30px;
@@ -139,6 +142,7 @@
   height: 200px;
 }
 .classify .search {
+  padding-top: 30px;
   padding-bottom: 150px;
   background: #8097bc;
   display: flex;
@@ -180,21 +184,18 @@
   margin-left: 10px;
 }
 .classify .class {
-  padding-bottom: 16px;
-  display: flex;
-  align-items: center;
-  height: 50px;
   background: #8097bc;
 }
-.classify .class .back {
-  font-size: 26px;
-  margin-left: 30px;
-  color: white;
+.classify .class .van-nav-bar__text {
+  color: #fff;
+  font-size: 14px;
 }
-.classify .class .c {
-  font-size: 16px;
+.classify .class .van-nav-bar__title {
+  color: #fff;
+  font-size: 18px;
+}
+.classify .class .van-icon-arrow-left::before {
   color: white;
-  margin-left: 130px;
 }
 .five nav {
   height: 45px;

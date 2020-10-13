@@ -7,7 +7,7 @@ import "./assets/reset.less";
 import "./assets/vannavbar.less";
 import "./assets/set-c/mine-c.less"
 import "amfe-flexible";
-import "./assets/style.less";
+import "./assets/style.css";
 import BaiduMap from 'vue-baidu-map';
 
 import { Tabbar, TabbarItem, Search, Icon, NavBar, Swipe, SwipeItem, Lazyload, Collapse, CollapseItem, Cell, CellGroup, Switch, Button, Image as VanImage, Sidebar, SidebarItem, TreeSelect, Form, Uploader, Field, RadioGroup, Radio, Calendar, DatetimePicker, Area, Popup } from 'vant';

@@ -47,12 +47,10 @@ const mutations = {
     getdituData(state,payload){
         state.myMapData=payload.content;
     },
-    // loginData(state,payload){
-    //     state.loginData= payload.data.userInfo;
-    //     if(payload.data.userInfo) {
-    //         sessionStorage.setItem('username',JSON.stringify(payload.data.userInfo));
-    //       }
-    // }
+    starPerson(state,payload){
+        state.starPerson=payload;
+        console.log(1111111111);
+    }
 }
 
 export default mutations;

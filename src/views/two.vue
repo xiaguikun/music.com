@@ -93,6 +93,11 @@ export default {
     subLogin(){
         if(this.password){
             sessionStorage.setItem('token','true')
+            let obj={
+                imgUrl:'https://dss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=4176367503,3353903800&fm=58&app=83&f=JPEG?w=250&h=250&s=2BA2E50740E3AAA431201DE30300E061',
+                title:'刘德华'
+            };
+            this.$store.commit('starPerson',obj);
             this.$router.push('/mine');
         }
     }

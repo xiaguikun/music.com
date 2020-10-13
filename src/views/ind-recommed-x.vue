@@ -146,8 +146,13 @@ export default {
     },
     watch: {
         async storyData() {
+            // let _this=this;
             await this.$nextTick();
+            await setTimeout(()=>{},1000);
             this.addBetterScroll();
+            // setTimeout(()=>{
+            //     _this.addBetterScroll();
+            // },1000)
         }
     }
 }
